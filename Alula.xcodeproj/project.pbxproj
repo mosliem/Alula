@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,14 @@
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
 		55F109C92BBCBB7B00ECCA6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C72BBCBB7B00ECCA6B /* LaunchScreen.storyboard */; };
 		55F109D62BBCBC5C00ECCA6B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109D52BBCBC5C00ECCA6B /* Endpoint.swift */; };
+		55F109DA2BBCBE5900ECCA6B /* Utilits in Frameworks */ = {isa = PBXBuildFile; productRef = 55F109D92BBCBE5900ECCA6B /* Utilits */; };
+		55F109DD2BBCC5CE00ECCA6B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109DC2BBCC5CE00ECCA6B /* Observable.swift */; };
+		55F109E02BBCC61B00ECCA6B /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109DF2BBCC61B00ECCA6B /* SignupCoordinator.swift */; };
+		55F109E22BBCC63200ECCA6B /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109E12BBCC63200ECCA6B /* AuthCoordinator.swift */; };
+		55F109E42BBCC64600ECCA6B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109E32BBCC64600ECCA6B /* LoginCoordinator.swift */; };
+		55F109E72BBCC66200ECCA6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109E62BBCC66200ECCA6B /* Coordinator.swift */; };
+		55F109E92BBCC67D00ECCA6B /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109E82BBCC67D00ECCA6B /* ParentCoordinator.swift */; };
+		55F109EC2BBCC69B00ECCA6B /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109EB2BBCC69B00ECCA6B /* RootCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,13 @@
 		55F109C82BBCBB7B00ECCA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F109CA2BBCBB7B00ECCA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F109D52BBCBC5C00ECCA6B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		55F109DC2BBCC5CE00ECCA6B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		55F109DF2BBCC61B00ECCA6B /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		55F109E12BBCC63200ECCA6B /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		55F109E32BBCC64600ECCA6B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		55F109E62BBCC66200ECCA6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		55F109E82BBCC67D00ECCA6B /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
+		55F109EB2BBCC69B00ECCA6B /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F109DA2BBCBE5900ECCA6B /* Utilits in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +100,9 @@
 		55F109D22BBCBC2400ECCA6B /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				55F109EA2BBCC68A00ECCA6B /* RootCoordinator */,
+				55F109E52BBCC65300ECCA6B /* Protocols */,
+				55F109DE2BBCC5FC00ECCA6B /* AuthCoordinators */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -98,6 +117,7 @@
 		55F109D42BBCBC4E00ECCA6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				55F109DB2BBCC5BF00ECCA6B /* Binding */,
 				55F109D52BBCBC5C00ECCA6B /* Endpoint.swift */,
 			);
 			path = Utils;
@@ -110,6 +130,41 @@
 				55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		55F109DB2BBCC5BF00ECCA6B /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				55F109DC2BBCC5CE00ECCA6B /* Observable.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		55F109DE2BBCC5FC00ECCA6B /* AuthCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				55F109DF2BBCC61B00ECCA6B /* SignupCoordinator.swift */,
+				55F109E12BBCC63200ECCA6B /* AuthCoordinator.swift */,
+				55F109E32BBCC64600ECCA6B /* LoginCoordinator.swift */,
+			);
+			path = AuthCoordinators;
+			sourceTree = "<group>";
+		};
+		55F109E52BBCC65300ECCA6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				55F109E62BBCC66200ECCA6B /* Coordinator.swift */,
+				55F109E82BBCC67D00ECCA6B /* ParentCoordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		55F109EA2BBCC68A00ECCA6B /* RootCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				55F109EB2BBCC69B00ECCA6B /* RootCoordinator.swift */,
+			);
+			path = RootCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +183,9 @@
 			dependencies = (
 			);
 			name = Alula;
+			packageProductDependencies = (
+				55F109D92BBCBE5900ECCA6B /* Utilits */,
+			);
 			productName = Alula;
 			productReference = 55F109B92BBCBB7900ECCA6B /* Alula.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 55F109B02BBCBB7900ECCA6B;
+			packageReferences = (
+				55F109D82BBCBE5900ECCA6B /* XCLocalSwiftPackageReference "../iOSProjects/Utilits" */,
+			);
 			productRefGroup = 55F109BA2BBCBB7900ECCA6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,8 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F109E72BBCC66200ECCA6B /* Coordinator.swift in Sources */,
+				55F109DD2BBCC5CE00ECCA6B /* Observable.swift in Sources */,
+				55F109EC2BBCC69B00ECCA6B /* RootCoordinator.swift in Sources */,
 				55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */,
+				55F109E42BBCC64600ECCA6B /* LoginCoordinator.swift in Sources */,
+				55F109E02BBCC61B00ECCA6B /* SignupCoordinator.swift in Sources */,
 				55F109D62BBCBC5C00ECCA6B /* Endpoint.swift in Sources */,
+				55F109E92BBCC67D00ECCA6B /* ParentCoordinator.swift in Sources */,
+				55F109E22BBCC63200ECCA6B /* AuthCoordinator.swift in Sources */,
 				55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +465,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		55F109D82BBCBE5900ECCA6B /* XCLocalSwiftPackageReference "../iOSProjects/Utilits" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../iOSProjects/Utilits;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55F109D92BBCBE5900ECCA6B /* Utilits */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utilits;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55F109B12BBCBB7900ECCA6B /* Project object */;
 }
