@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550FE11D2BBD257900F619E2 /* IconDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */; };
+		550FE1202BBD2DDC00F619E2 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */; };
+		550FE1232BBD328800F619E2 /* FontSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE1222BBD328800F619E2 /* FontSystem.swift */; };
+		550FE12E2BBD3E1700F619E2 /* NeueHaasDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */; };
+		550FE12F2BBD3E1700F619E2 /* NeueHaasDisplayMediu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */; };
+		550FE1302BBD3E1700F619E2 /* NeueHaasDisplayRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -44,9 +50,19 @@
 		55F10A392BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A382BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift */; };
 		55F10A3C2BBCD3F900ECCA6B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A3B2BBCD3F900ECCA6B /* Token.swift */; };
 		55F10A3F2BBCD42100ECCA6B /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A3E2BBCD42100ECCA6B /* LoginRepositoryProtocol.swift */; };
+		55F10A412BBCD46100ECCA6B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A402BBCD46100ECCA6B /* NetworkService.swift */; };
+		55F10A432BBCD48500ECCA6B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A422BBCD48500ECCA6B /* NetworkError.swift */; };
+		55F10A4A2BBCF3FB00ECCA6B /* FloatingLabelTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F10A492BBCF3FB00ECCA6B /* FloatingLabelTextField.xib */; };
+		55F10A4C2BBCF50500ECCA6B /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A4B2BBCF50500ECCA6B /* FloatingLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDesignSystem.swift; sourceTree = "<group>"; };
+		550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
+		550FE1222BBD328800F619E2 /* FontSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSystem.swift; sourceTree = "<group>"; };
+		550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayRoman.ttf; sourceTree = "<group>"; };
+		550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayBold.ttf; sourceTree = "<group>"; };
+		550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayMediu.ttf; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +101,10 @@
 		55F10A382BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProtocol.swift; sourceTree = "<group>"; };
 		55F10A3B2BBCD3F900ECCA6B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		55F10A3E2BBCD42100ECCA6B /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		55F10A402BBCD46100ECCA6B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		55F10A422BBCD48500ECCA6B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		55F10A492BBCF3FB00ECCA6B /* FloatingLabelTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingLabelTextField.xib; sourceTree = "<group>"; };
+		55F10A4B2BBCF50500ECCA6B /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +119,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550FE11A2BBD254200F619E2 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				550FE1212BBD327600F619E2 /* FontSystem */,
+				550FE11E2BBD2DCD00F619E2 /* ColorSystem */,
+				550FE11B2BBD254F00F619E2 /* ImageDesignSytem */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		550FE11B2BBD254F00F619E2 /* ImageDesignSytem */ = {
+			isa = PBXGroup;
+			children = (
+				550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */,
+			);
+			path = ImageDesignSytem;
+			sourceTree = "<group>";
+		};
+		550FE11E2BBD2DCD00F619E2 /* ColorSystem */ = {
+			isa = PBXGroup;
+			children = (
+				550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */,
+			);
+			path = ColorSystem;
+			sourceTree = "<group>";
+		};
+		550FE1212BBD327600F619E2 /* FontSystem */ = {
+			isa = PBXGroup;
+			children = (
+				550FE1222BBD328800F619E2 /* FontSystem.swift */,
+			);
+			path = FontSystem;
+			sourceTree = "<group>";
+		};
+		550FE1272BBD387A00F619E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */,
+				550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */,
+				550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		55F109B02BBCBB7900ECCA6B = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +205,8 @@
 		55F109D12BBCBC1B00ECCA6B /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				55F10A402BBCD46100ECCA6B /* NetworkService.swift */,
+				55F10A422BBCD48500ECCA6B /* NetworkError.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -167,6 +233,7 @@
 		55F109D42BBCBC4E00ECCA6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				55F10A442BBCEE4600ECCA6B /* ReusableViews */,
 				55F109DB2BBCC5BF00ECCA6B /* Binding */,
 				55F109D52BBCBC5C00ECCA6B /* Endpoint.swift */,
 			);
@@ -176,6 +243,8 @@
 		55F109D72BBCBC7E00ECCA6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				550FE1272BBD387A00F619E2 /* Fonts */,
+				550FE11A2BBD254200F619E2 /* DesignSystem */,
 				55F109C72BBCBB7B00ECCA6B /* LaunchScreen.storyboard */,
 				55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */,
 			);
@@ -479,6 +548,15 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
+		55F10A442BBCEE4600ECCA6B /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				55F10A492BBCF3FB00ECCA6B /* FloatingLabelTextField.xib */,
+				55F10A4B2BBCF50500ECCA6B /* FloatingLabelTextField.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,7 +621,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550FE12E2BBD3E1700F619E2 /* NeueHaasDisplayBold.ttf in Resources */,
+				550FE12F2BBD3E1700F619E2 /* NeueHaasDisplayMediu.ttf in Resources */,
+				550FE1302BBD3E1700F619E2 /* NeueHaasDisplayRoman.ttf in Resources */,
 				55F10A332BBCD27600ECCA6B /* LoginViewController.xib in Resources */,
+				55F10A4A2BBCF3FB00ECCA6B /* FloatingLabelTextField.xib in Resources */,
 				55F10A052BBCC91600ECCA6B /* SignupViewController.xib in Resources */,
 				55F109C92BBCBB7B00ECCA6B /* LaunchScreen.storyboard in Resources */,
 				55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */,
@@ -574,20 +656,26 @@
 				55F10A222BBCCFB400ECCA6B /* LoginData.swift in Sources */,
 				55F10A0E2BBCCA5700ECCA6B /* SignupUsecase.swift in Sources */,
 				55F109F22BBCC80500ECCA6B /* SignupEndpoints.swift in Sources */,
+				55F10A432BBCD48500ECCA6B /* NetworkError.swift in Sources */,
 				55F109E42BBCC64600ECCA6B /* LoginCoordinator.swift in Sources */,
 				55F109E02BBCC61B00ECCA6B /* SignupCoordinator.swift in Sources */,
 				55F10A372BBCD3A100ECCA6B /* LoginUsecase.swift in Sources */,
+				550FE11D2BBD257900F619E2 /* IconDesignSystem.swift in Sources */,
 				55F109D62BBCBC5C00ECCA6B /* Endpoint.swift in Sources */,
 				55F10A042BBCC91600ECCA6B /* SignupViewController.swift in Sources */,
+				55F10A412BBCD46100ECCA6B /* NetworkService.swift in Sources */,
 				55F10A2D2BBCD20B00ECCA6B /* LoginPresentationProtocols.swift in Sources */,
 				55F109E92BBCC67D00ECCA6B /* ParentCoordinator.swift in Sources */,
 				55F109E22BBCC63200ECCA6B /* AuthCoordinator.swift in Sources */,
 				55F109FF2BBCC8D400ECCA6B /* SignupPrsentationProtocols.swift in Sources */,
 				55F10A3C2BBCD3F900ECCA6B /* Token.swift in Sources */,
+				55F10A4C2BBCF50500ECCA6B /* FloatingLabelTextField.swift in Sources */,
 				55F109F82BBCC83D00ECCA6B /* SignupData.swift in Sources */,
 				55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */,
+				550FE1232BBD328800F619E2 /* FontSystem.swift in Sources */,
 				55F10A392BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift in Sources */,
 				55F10A102BBCCA7400ECCA6B /* SignupUsecaseProtocol.swift in Sources */,
+				550FE1202BBD2DDC00F619E2 /* ColorSystem.swift in Sources */,
 				55F10A132BBCCA9600ECCA6B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

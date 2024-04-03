@@ -9,7 +9,6 @@ import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
     
-    var loginState: Observable<String> = Observable("")
     private var coordinator: LoginCoordinatorProtocol
     private var usecase: LoginUsecaseProtocol
     
@@ -18,7 +17,9 @@ class LoginViewModel: LoginViewModelProtocol {
         self.usecase = usecase
     }
     
-    func viewDidLoad() {
+    func viewDidLoad() {}
+    
+    func loginPressed(){
         Task{
             await login()
         }
@@ -34,13 +35,15 @@ class LoginViewModel: LoginViewModelProtocol {
                         password: "mohamed011"
                     )
             )
-            
             print(token)
-            loginState.value = "Login Success!\(token)"
         }
         catch{
-            loginState.value = error.localizedDescription
+            print(error)
         }
+    }
+    
+    func newUserPressed(){
+        coordinator.signup()
     }
     
 }

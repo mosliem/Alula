@@ -9,7 +9,6 @@ import Foundation
 
 class SignupViewModel: SignupViewModelProtocol {
     
-    var signupState: Observable<String> = Observable("")
     
     private var signupUsecase: SignupUsecaseProtocol
     private var signupCoordinator: SignupCoordinatorProtocol
@@ -20,11 +19,15 @@ class SignupViewModel: SignupViewModelProtocol {
     }
     
     func viewDidLoad() {
-        signup()
+//        signup()
     }
     
     func loginPressed() {
         signupCoordinator.login()
+    }
+    
+    func signupPressed() {
+        signup()
     }
     
     private func signup(){
@@ -45,11 +48,11 @@ class SignupViewModel: SignupViewModelProtocol {
             case .finished:
                 break
             case.failure(let error):
-                self?.signupState.value = error.description
+                print(error)
             }
         } receiveValue: { user in
             print(user.toViewModel())
-            self.signupState.value = "Sign up success!\(user)"
+//            self.signupState.value = "Sign up success!\(user)"
         }
         .cancel()
 

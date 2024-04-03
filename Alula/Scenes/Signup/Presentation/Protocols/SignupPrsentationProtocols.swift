@@ -17,8 +17,9 @@ typealias SignupViewModelProtocol = SignupViewModelInputProtocol & SignupViewMod
 protocol SignupViewModelInputProtocol: AnyObject {
     func viewDidLoad()
     func loginPressed()
+    func signupPressed()
 }
 
 protocol SignupViewModelOutputProtocol: AnyObject {
-    var signupState: Observable<String> { get set }
+        
 }

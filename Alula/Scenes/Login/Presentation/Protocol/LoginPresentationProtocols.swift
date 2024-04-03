@@ -14,9 +14,10 @@ protocol LoginViewProtocol: AnyObject {
 typealias LoginViewModelProtocol = LoginViewModelInputProtocol & LoginViewModelOutputProtocol
 
 protocol LoginViewModelInputProtocol: AnyObject {
+    func loginPressed()
     func viewDidLoad()
+    func newUserPressed()
 }
 
 protocol LoginViewModelOutputProtocol: AnyObject {
-    var loginState: Observable<String> { get set }
 }
