@@ -10,11 +10,14 @@ import Utilits
 class LoginRepository: LoginRepositoryProtocol {
     func login(endpoint: Requsetable, body: [String : String]) async throws -> TokenDto {
         
-        return try await NetworkService.shared.request(
+        let token = try await NetworkService.shared.request(
             endpoint: endpoint,
             model: TokenDto.self,
             body: body
         )
+        
+        
+        return token
         
     }
 }

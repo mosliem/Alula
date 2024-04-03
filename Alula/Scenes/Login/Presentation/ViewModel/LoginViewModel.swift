@@ -36,6 +36,7 @@ class LoginViewModel: LoginViewModelProtocol {
                     )
             )
             print(token)
+            coordinator.home()
         }
         catch{
             print(error)

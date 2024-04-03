@@ -43,4 +43,13 @@ extension AuthCoordinator {
         childCoordinators.append(signupCoordinator)
         signupCoordinator.start(animated: true)
     }
+    
+    func home(){
+        let homeCoordinator = HomeCoordinator(
+            navigationController: navigationController,
+            parent: self
+        )
+        childCoordinators.append(homeCoordinator)
+        homeCoordinator.start(animated: true)
+    }
 }

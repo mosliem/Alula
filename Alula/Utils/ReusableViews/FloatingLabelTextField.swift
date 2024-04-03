@@ -45,7 +45,7 @@ extension FloatingLabelTextField {
 
 extension FloatingLabelTextField {
     private func customPadding(){
-        self.textfield.addPadding(side: .left, 8)
+        self.textfield.addPadding(side: .left, 12)
         self.textfield.addPadding(side: .right, 30)
     }
 }

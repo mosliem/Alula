@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginCoordinatorProtocol {
     func signup()
+    func home()
 }
 
 class LoginCoordinator: Coordinator {
@@ -36,5 +37,9 @@ class LoginCoordinator: Coordinator {
 extension LoginCoordinator: LoginCoordinatorProtocol {
     func signup() {
         parent.signup()
+    }
+    
+    func home(){
+        parent.home()
     }
 }
