@@ -23,7 +23,7 @@ class HomeRepository: HomeRepositoryProtocol {
         return remoteRepository.getProducts(endpoint: endpoint)
     }
     
-    func cacheProducts(products: [Product]){
+    func cacheProducts(products: [ProductEntity]){
         localRepository.cacheProducts(products: products)
     }
 }

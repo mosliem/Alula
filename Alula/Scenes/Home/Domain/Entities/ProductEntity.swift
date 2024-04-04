@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Product {
+struct ProductEntity {
     var id: Int
     var title: String
     var price: Int
     var description: String
-    var category: Category
+    var category: CategoryEntity
     var images: [String]
     
 }

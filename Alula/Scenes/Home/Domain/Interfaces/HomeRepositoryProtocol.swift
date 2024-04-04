@@ -11,6 +11,6 @@ import Combine
 
 protocol HomeRepositoryProtocol {
     func getProducts(endpoint: Requsetable) -> AnyPublisher<ProductsResponseDto, APIError>
-    func cacheProducts(products: [Product])
+    func cacheProducts(products: [ProductEntity])
 }
 

@@ -14,7 +14,7 @@ struct HomeAPIEndpoint {
             schema: "https",
             host: "api.escuelajs.co",
             path: "/api/v1/products",
-            queryParameters: ["limit": 2, "offset": 1],
+            queryParameters: ["limit": 20, "offset": 1],
             headers: ["Content-Type": "application/json"],
             httpMethod: .get
         )

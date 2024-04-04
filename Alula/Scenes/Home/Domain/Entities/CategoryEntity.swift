@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category{
+struct CategoryEntity{
     var id: Int
     var name: String
     var image: String

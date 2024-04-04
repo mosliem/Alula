@@ -12,8 +12,8 @@ struct ProductsResponseDto: Codable {
 }
 
 extension ProductsResponseDto {
-    func toDomain() -> [Product]{
-        var absoluteProducts = [Product]()
+    func toDomain() -> [ProductEntity]{
+        var absoluteProducts = [ProductEntity]()
         for product in products {
             let p = product.toDomain()
             absoluteProducts.append(p)
@@ -35,12 +35,12 @@ struct ProductsDto: Codable {
 }
 
 extension ProductsDto {
-    func toDomain() -> Product{
+    func toDomain() -> ProductEntity{
         .init(id: id ?? 0,
               title: title ?? "",
               price: price ?? 0,
               description: description ?? "",
-              category: category?.toDomain() ?? Category(id: 10, name: "",image: ""),
+              category: category?.toDomain() ?? CategoryEntity(id: 10, name: "",image: ""),
               images: []
         )
     }
@@ -55,7 +55,7 @@ struct CategoryDto: Codable{
 }
 
 extension CategoryDto {
-    func toDomain() -> Category {
+    func toDomain() -> CategoryEntity {
         .init(id: id ?? 0, name: name ?? "", image: image ?? "")
     }
 }
