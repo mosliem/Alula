@@ -13,7 +13,7 @@ struct LoginAPIEndpoint {
         return Endpoint(
             schema: "https",
             host: "api.escuelajs.co",
-            path: "/api/v1/auth/login",
+            path: LoginApiPath.loginPath,
             headers: ["Content-Type": "application/json"],
             httpMethod: .post
         )

@@ -13,7 +13,7 @@ struct SignupAPIEndpoint {
         return Endpoint(
             schema: "https",
             host: "api.escuelajs.co",
-            path: "/api/v1/users/",
+            path: SignupApiPath.signup,
             headers:[
                 "Content-Type": "application/json"
             ],

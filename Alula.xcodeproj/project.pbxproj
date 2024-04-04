@@ -30,6 +30,9 @@
 		550FE1602BBD624200F619E2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE15F2BBD624200F619E2 /* HomeCoordinator.swift */; };
 		5529BA8D2BBED9DC00BF292F /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA8B2BBED9DC00BF292F /* Products.xcdatamodeld */; };
 		5529BA902BBEDE2200BF292F /* CoredataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA8F2BBEDE2200BF292F /* CoredataStorage.swift */; };
+		5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA912BBEEA1000BF292F /* HomeApiPath.swift */; };
+		5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA932BBEEAF700BF292F /* LoginApiPath.swift */; };
+		5529BA962BBEEB5500BF292F /* SignupApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA952BBEEB5500BF292F /* SignupApiPath.swift */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -97,6 +100,9 @@
 		550FE15F2BBD624200F619E2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		5529BA8C2BBED9DC00BF292F /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
 		5529BA8F2BBEDE2200BF292F /* CoredataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataStorage.swift; sourceTree = "<group>"; };
+		5529BA912BBEEA1000BF292F /* HomeApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiPath.swift; sourceTree = "<group>"; };
+		5529BA932BBEEAF700BF292F /* LoginApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiPath.swift; sourceTree = "<group>"; };
+		5529BA952BBEEB5500BF292F /* SignupApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupApiPath.swift; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				550FE1372BBD557D00F619E2 /* HomeAPIEndpoints.swift */,
+				5529BA912BBEEA1000BF292F /* HomeApiPath.swift */,
 			);
 			path = "APIEndpints ";
 			sourceTree = "<group>";
@@ -499,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				55F109F12BBCC80500ECCA6B /* SignupEndpoints.swift */,
+				5529BA952BBEEB5500BF292F /* SignupApiPath.swift */,
 			);
 			path = APIEndpoints;
 			sourceTree = "<group>";
@@ -646,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				55F10A1E2BBCCF9300ECCA6B /* LoginAPIEndpoint.swift */,
+				5529BA932BBEEAF700BF292F /* LoginApiPath.swift */,
 			);
 			path = LoginAPIEndpoints;
 			sourceTree = "<group>";
@@ -841,6 +850,7 @@
 				55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */,
 				550FE14E2BBD5D8000F619E2 /* FetchProductsUsecase.swift in Sources */,
 				550FE15C2BBD618B00F619E2 /* HomeViewController.swift in Sources */,
+				5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */,
 				550FE1602BBD624200F619E2 /* HomeCoordinator.swift in Sources */,
 				550FE13B2BBD55E100F619E2 /* ProductsDto.swift in Sources */,
 				55F10A222BBCCFB400ECCA6B /* LoginData.swift in Sources */,
@@ -853,6 +863,7 @@
 				550FE11D2BBD257900F619E2 /* IconDesignSystem.swift in Sources */,
 				55F109D62BBCBC5C00ECCA6B /* Endpoint.swift in Sources */,
 				55F10A042BBCC91600ECCA6B /* SignupViewController.swift in Sources */,
+				5529BA962BBEEB5500BF292F /* SignupApiPath.swift in Sources */,
 				55F10A412BBCD46100ECCA6B /* NetworkService.swift in Sources */,
 				55F10A2D2BBCD20B00ECCA6B /* LoginPresentationProtocols.swift in Sources */,
 				5529BA8D2BBED9DC00BF292F /* Products.xcdatamodeld in Sources */,
@@ -869,6 +880,7 @@
 				55F109F82BBCC83D00ECCA6B /* SignupData.swift in Sources */,
 				55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */,
 				550FE1232BBD328800F619E2 /* FontSystem.swift in Sources */,
+				5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */,
 				55F10A392BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift in Sources */,
 				55F10A102BBCCA7400ECCA6B /* SignupUsecaseProtocol.swift in Sources */,
 				550FE1202BBD2DDC00F619E2 /* ColorSystem.swift in Sources */,
