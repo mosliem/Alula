@@ -10,7 +10,7 @@ import Utilits
 import Combine
 
 protocol HomeRepositoryProtocol {
-    func getProducts(endpoint: Requsetable) -> AnyPublisher<ProductsResponseDto, APIError>
+    func getProducts(endpoint: Requsetable) -> AnyPublisher<[ProductDto], APIError>
     func cacheProducts(products: [ProductEntity])
 }
 

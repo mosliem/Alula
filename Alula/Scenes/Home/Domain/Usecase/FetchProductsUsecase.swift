@@ -29,7 +29,7 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
                     print(error)
                 }
             } receiveValue: { [weak self] products in
-                let products = products.toDomain()
+                let products = products.map({$0.toDomain()})
                 print(products)
                 self?.homeRepository.cacheProducts(products: products)
             }

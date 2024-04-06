@@ -10,5 +10,5 @@ import Foundation
 struct CategoryEntity{
     var id: Int
     var name: String
-    var image: String
+    var image: URL
 }

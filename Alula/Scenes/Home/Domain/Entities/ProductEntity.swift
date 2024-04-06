@@ -13,8 +13,7 @@ struct ProductEntity {
     var price: Int
     var description: String
     var category: CategoryEntity
-    var images: [String]
-    
+    var images: [URL]
 }
 
 

@@ -52,7 +52,7 @@ class CoredataStorage {
         let category = Category(context: context)
         category.id = Int32(storedCategory.id)
         category.name = storedCategory.name
-        category.image = storedCategory.image
+        category.image = storedCategory.image.absoluteString
         return category
     }
 }

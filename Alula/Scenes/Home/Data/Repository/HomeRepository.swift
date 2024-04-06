@@ -19,7 +19,7 @@ class HomeRepository: HomeRepositoryProtocol {
         self.localRepository = localRepository
     }
     
-    func getProducts(endpoint: Requsetable) -> AnyPublisher<ProductsResponseDto, APIError>{
+    func getProducts(endpoint: Requsetable) -> AnyPublisher<[ProductDto], APIError>{
         return remoteRepository.getProducts(endpoint: endpoint)
     }
     

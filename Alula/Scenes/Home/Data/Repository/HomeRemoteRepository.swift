@@ -10,14 +10,14 @@ import Combine
 import Utilits
 
 protocol HomeRemoteRepositoryProtocol{
-    func getProducts(endpoint: Requsetable) -> AnyPublisher<ProductsResponseDto, APIError>
+    func getProducts(endpoint: Requsetable) -> AnyPublisher<[ProductDto], APIError>
 }
 
 class HomeRemoteRepository: HomeRemoteRepositoryProtocol {
-    func getProducts(endpoint: Requsetable) -> AnyPublisher<ProductsResponseDto, APIError> {
+    func getProducts(endpoint: Requsetable) -> AnyPublisher<[ProductDto], APIError> {
         return NetworkManager.shared.executeRequest(
             with: endpoint,
-            model: ProductsResponseDto.self, body: [:]
+            model: [ProductDto].self, body: [:]
         )
     }
 
