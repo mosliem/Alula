@@ -9,14 +9,15 @@ import CoreData
 
 class CoredataStorage {
     static let shared = CoredataStorage()
-    lazy var context = presistanceContainer.viewContext
 
     private init(){}
     
+    private lazy var context = presistanceContainer.viewContext
     private lazy var presistanceContainer: NSPersistentContainer = {
         let container =  NSPersistentContainer(name: "Products")
         container.loadPersistentStores { _, error in
-            guard let error else {
+            guard error == nil else {
+                print(error.debugDescription)
                 fatalError("Can't load core data")
             }
         }
@@ -27,6 +28,7 @@ class CoredataStorage {
         if context.hasChanges{
             do{
                 try context.save()
+                print("Saved")
             }
             catch{
                 print(error.localizedDescription)
@@ -42,8 +44,8 @@ class CoredataStorage {
         product.id = Int32(storedProduct.id)
         product.category = createCategory(storedCategory: storedProduct.category)
         product.price = Double(storedProduct.price)
-        product.title = storedProduct.title
-        product.productDescription = storedProduct.description
+        product.name = storedProduct.title
+        product.info = storedProduct.description
         save()
     }
     
@@ -52,7 +54,6 @@ class CoredataStorage {
         let category = Category(context: context)
         category.id = Int32(storedCategory.id)
         category.name = storedCategory.name
-        category.image = storedCategory.image.absoluteString
         return category
     }
 }

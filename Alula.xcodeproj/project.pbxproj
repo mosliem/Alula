@@ -28,7 +28,7 @@
 		550FE15C2BBD618B00F619E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE15A2BBD618B00F619E2 /* HomeViewController.swift */; };
 		550FE15D2BBD618B00F619E2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550FE15B2BBD618B00F619E2 /* HomeViewController.xib */; };
 		550FE1602BBD624200F619E2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE15F2BBD624200F619E2 /* HomeCoordinator.swift */; };
-		5529BA8D2BBED9DC00BF292F /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA8B2BBED9DC00BF292F /* Products.xcdatamodeld */; };
+		552816572BC22A140091F08C /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 552816552BC22A140091F08C /* Products.xcdatamodeld */; };
 		5529BA902BBEDE2200BF292F /* CoredataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA8F2BBEDE2200BF292F /* CoredataStorage.swift */; };
 		5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA912BBEEA1000BF292F /* HomeApiPath.swift */; };
 		5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA932BBEEAF700BF292F /* LoginApiPath.swift */; };
@@ -98,7 +98,7 @@
 		550FE15A2BBD618B00F619E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		550FE15B2BBD618B00F619E2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		550FE15F2BBD624200F619E2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		5529BA8C2BBED9DC00BF292F /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
+		552816562BC22A140091F08C /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
 		5529BA8F2BBEDE2200BF292F /* CoredataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataStorage.swift; sourceTree = "<group>"; };
 		5529BA912BBEEA1000BF292F /* HomeApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiPath.swift; sourceTree = "<group>"; };
 		5529BA932BBEEAF700BF292F /* LoginApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiPath.swift; sourceTree = "<group>"; };
@@ -341,8 +341,8 @@
 		5529BA8E2BBED9E500BF292F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				5529BA8B2BBED9DC00BF292F /* Products.xcdatamodeld */,
 				5529BA8F2BBEDE2200BF292F /* CoredataStorage.swift */,
+				552816552BC22A140091F08C /* Products.xcdatamodeld */,
 			);
 			name = CoreData;
 			path = Network/CoreData;
@@ -866,7 +866,6 @@
 				5529BA962BBEEB5500BF292F /* SignupApiPath.swift in Sources */,
 				55F10A412BBCD46100ECCA6B /* NetworkService.swift in Sources */,
 				55F10A2D2BBCD20B00ECCA6B /* LoginPresentationProtocols.swift in Sources */,
-				5529BA8D2BBED9DC00BF292F /* Products.xcdatamodeld in Sources */,
 				55F109E92BBCC67D00ECCA6B /* ParentCoordinator.swift in Sources */,
 				55F109E22BBCC63200ECCA6B /* AuthCoordinator.swift in Sources */,
 				55F109FF2BBCC8D400ECCA6B /* SignupPrsentationProtocols.swift in Sources */,
@@ -880,6 +879,7 @@
 				55F109F82BBCC83D00ECCA6B /* SignupData.swift in Sources */,
 				55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */,
 				550FE1232BBD328800F619E2 /* FontSystem.swift in Sources */,
+				552816572BC22A140091F08C /* Products.xcdatamodeld in Sources */,
 				5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */,
 				55F10A392BBCD3BB00ECCA6B /* LoginUsecaseProtocol.swift in Sources */,
 				55F10A102BBCCA7400ECCA6B /* SignupUsecaseProtocol.swift in Sources */,
@@ -1114,12 +1114,12 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		5529BA8B2BBED9DC00BF292F /* Products.xcdatamodeld */ = {
+		552816552BC22A140091F08C /* Products.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5529BA8C2BBED9DC00BF292F /* Products.xcdatamodel */,
+				552816562BC22A140091F08C /* Products.xcdatamodel */,
 			);
-			currentVersion = 5529BA8C2BBED9DC00BF292F /* Products.xcdatamodel */;
+			currentVersion = 552816562BC22A140091F08C /* Products.xcdatamodel */;
 			path = Products.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
