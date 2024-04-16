@@ -33,6 +33,11 @@
 		554805F12BCE0D23000E60B0 /* NeueRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */; };
 		554805F22BCE0D23000E60B0 /* NeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EF2BCE0D23000E60B0 /* NeueBold.ttf */; };
 		554805F32BCE0D23000E60B0 /* NeueMediu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805F02BCE0D23000E60B0 /* NeueMediu.ttf */; };
+		555BF3602BCF2BC20015794E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF35F2BCF2BC20015794E /* DIContainer.swift */; };
+		555BF3632BCF2E150015794E /* LoginDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3622BCF2E150015794E /* LoginDependenciesFactory.swift */; };
+		555BF3652BCF39570015794E /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3642BCF39570015794E /* FactoryProtocol.swift */; };
+		555BF3672BCF3EE30015794E /* SignupDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */; };
+		555BF3692BCF3F950015794E /* HomeDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */; };
 		5578B0F22BCEED7700EE2471 /* ProductsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
@@ -104,6 +109,11 @@
 		554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueRoman.ttf; sourceTree = "<group>"; };
 		554805EF2BCE0D23000E60B0 /* NeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueBold.ttf; sourceTree = "<group>"; };
 		554805F02BCE0D23000E60B0 /* NeueMediu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueMediu.ttf; sourceTree = "<group>"; };
+		555BF35F2BCF2BC20015794E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		555BF3622BCF2E150015794E /* LoginDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDependenciesFactory.swift; sourceTree = "<group>"; };
+		555BF3642BCF39570015794E /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
+		555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDependenciesFactory.swift; sourceTree = "<group>"; };
+		555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesFactory.swift; sourceTree = "<group>"; };
 		5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAdapter.swift; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -351,6 +361,26 @@
 			path = Network/CoreData;
 			sourceTree = "<group>";
 		};
+		555BF35E2BCF2BAF0015794E /* DI Container */ = {
+			isa = PBXGroup;
+			children = (
+				555BF3612BCF2BC60015794E /* DI Factory */,
+				555BF3642BCF39570015794E /* FactoryProtocol.swift */,
+				555BF35F2BCF2BC20015794E /* DIContainer.swift */,
+			);
+			path = "DI Container";
+			sourceTree = "<group>";
+		};
+		555BF3612BCF2BC60015794E /* DI Factory */ = {
+			isa = PBXGroup;
+			children = (
+				555BF3622BCF2E150015794E /* LoginDependenciesFactory.swift */,
+				555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */,
+				555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */,
+			);
+			path = "DI Factory";
+			sourceTree = "<group>";
+		};
 		5578B0F02BCEED4700EE2471 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +408,7 @@
 		55F109BB2BBCBB7900ECCA6B /* Alula */ = {
 			isa = PBXGroup;
 			children = (
+				555BF35E2BCF2BAF0015794E /* DI Container */,
 				55F109D42BBCBC4E00ECCA6B /* Utils */,
 				55F109D32BBCBC2D00ECCA6B /* Scenes */,
 				55F109D22BBCBC2400ECCA6B /* Navigation */,
@@ -871,6 +902,7 @@
 				55F10A072BBCC94C00ECCA6B /* SignupViewModel.swift in Sources */,
 				55F109E72BBCC66200ECCA6B /* Coordinator.swift in Sources */,
 				550FE13F2BBD577A00F619E2 /* HomeRepository.swift in Sources */,
+				555BF3602BCF2BC20015794E /* DIContainer.swift in Sources */,
 				55F10A3F2BBCD42100ECCA6B /* LoginRepositoryProtocol.swift in Sources */,
 				55F109DD2BBCC5CE00ECCA6B /* Observable.swift in Sources */,
 				55F10A0B2BBCCA0B00ECCA6B /* SignupRepositoryProtocol.swift in Sources */,
@@ -879,6 +911,7 @@
 				55F109F52BBCC81F00ECCA6B /* UserDto.swift in Sources */,
 				550FE1462BBD59A200F619E2 /* HomeLocalRepository.swift in Sources */,
 				55F109FB2BBCC87900ECCA6B /* SignupRepository.swift in Sources */,
+				555BF3672BCF3EE30015794E /* SignupDependenciesFactory.swift in Sources */,
 				55F10A2F2BBCD25D00ECCA6B /* LoginViewModel.swift in Sources */,
 				55F109EC2BBCC69B00ECCA6B /* RootCoordinator.swift in Sources */,
 				55F10A182BBCCF0700ECCA6B /* LoginRepository.swift in Sources */,
@@ -887,6 +920,9 @@
 				550FE15C2BBD618B00F619E2 /* HomeViewController.swift in Sources */,
 				5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */,
 				550FE1602BBD624200F619E2 /* HomeCoordinator.swift in Sources */,
+				555BF3692BCF3F950015794E /* HomeDependenciesFactory.swift in Sources */,
+				555BF3652BCF39570015794E /* FactoryProtocol.swift in Sources */,
+				555BF3632BCF2E150015794E /* LoginDependenciesFactory.swift in Sources */,
 				550FE13B2BBD55E100F619E2 /* ProductDto.swift in Sources */,
 				55F10A222BBCCFB400ECCA6B /* LoginData.swift in Sources */,
 				55F10A0E2BBCCA5700ECCA6B /* SignupUsecase.swift in Sources */,

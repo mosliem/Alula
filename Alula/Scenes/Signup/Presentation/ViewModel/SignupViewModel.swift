@@ -10,9 +10,9 @@ import Foundation
 class SignupViewModel: SignupViewModelProtocol {
 
     private var signupUsecase: SignupUsecaseProtocol
-    private var signupCoordinator: SignupCoordinatorProtocol
+    private var signupCoordinator: SignupCoordinatorProtocol?
 
-    init(signupUsecase: SignupUsecaseProtocol, coordinator: SignupCoordinatorProtocol) {
+    init(signupUsecase: SignupUsecaseProtocol, coordinator: SignupCoordinatorProtocol?) {
         self.signupUsecase = signupUsecase
         self.signupCoordinator = coordinator
     }
@@ -22,7 +22,7 @@ class SignupViewModel: SignupViewModelProtocol {
     }
 
     func loginPressed() {
-        signupCoordinator.login()
+        signupCoordinator?.login()
     }
 
     func signupPressed() {

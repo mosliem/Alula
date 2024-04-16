@@ -9,10 +9,10 @@ import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
 
-    private var coordinator: LoginCoordinatorProtocol
+    private var coordinator: LoginCoordinatorProtocol?
     private var usecase: LoginUsecaseProtocol
 
-    init(coordinator: LoginCoordinatorProtocol, usecase: LoginUsecaseProtocol) {
+    init(coordinator: LoginCoordinatorProtocol?, usecase: LoginUsecaseProtocol) {
         self.coordinator = coordinator
         self.usecase = usecase
     }
@@ -36,14 +36,14 @@ class LoginViewModel: LoginViewModelProtocol {
                     )
             )
             print(token)
-            coordinator.home()
+            coordinator?.home()
         } catch {
             print(error)
         }
     }
 
     func newUserPressed() {
-        coordinator.signup()
+        coordinator?.signup()
     }
 
 }
