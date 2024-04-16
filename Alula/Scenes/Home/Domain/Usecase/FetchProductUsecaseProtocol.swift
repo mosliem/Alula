@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol FetchProductsUsecaseProtocol{
+protocol FetchProductsUsecaseProtocol {
     func fetchProducts()
 }

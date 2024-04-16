@@ -11,4 +11,3 @@ struct Token {
     var accessToken: String
     var refreshToken: String
 }
-

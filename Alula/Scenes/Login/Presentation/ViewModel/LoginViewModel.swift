@@ -8,26 +8,26 @@
 import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
-    
+
     private var coordinator: LoginCoordinatorProtocol
     private var usecase: LoginUsecaseProtocol
-    
+
     init(coordinator: LoginCoordinatorProtocol, usecase: LoginUsecaseProtocol) {
         self.coordinator = coordinator
         self.usecase = usecase
     }
-    
+
     func viewDidLoad() {}
-    
-    func loginPressed(){
-        Task{
+
+    func loginPressed() {
+        Task {
             await login()
         }
     }
-    
+
     @MainActor
-    private func login() async{
-        do{
+    private func login() async {
+        do {
           let token = try await usecase.execute(
                 loginData:
                     LoginData(
@@ -37,14 +37,13 @@ class LoginViewModel: LoginViewModelProtocol {
             )
             print(token)
             coordinator.home()
-        }
-        catch{
+        } catch {
             print(error)
         }
     }
-    
-    func newUserPressed(){
+
+    func newUserPressed() {
         coordinator.signup()
     }
-    
+
 }

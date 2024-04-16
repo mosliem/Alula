@@ -8,29 +8,28 @@
 import Foundation
 
 class SignupViewModel: SignupViewModelProtocol {
-    
-    
+
     private var signupUsecase: SignupUsecaseProtocol
     private var signupCoordinator: SignupCoordinatorProtocol
-    
+
     init(signupUsecase: SignupUsecaseProtocol, coordinator: SignupCoordinatorProtocol) {
         self.signupUsecase = signupUsecase
         self.signupCoordinator = coordinator
     }
-    
+
     func viewDidLoad() {
 //        signup()
     }
-    
+
     func loginPressed() {
         signupCoordinator.login()
     }
-    
+
     func signupPressed() {
         signup()
     }
-    
-    private func signup(){
+
+    private func signup() {
         signupUsecase.execute(
             signupData:
                 SignupData(
@@ -42,8 +41,8 @@ class SignupViewModel: SignupViewModelProtocol {
                 )
         )
         .receive(on: DispatchQueue.main)
-        .sink {[weak self] completion in
-        
+        .sink { completion in
+
             switch completion {
             case .finished:
                 break
@@ -57,5 +56,5 @@ class SignupViewModel: SignupViewModelProtocol {
         .cancel()
 
     }
-    
+
 }

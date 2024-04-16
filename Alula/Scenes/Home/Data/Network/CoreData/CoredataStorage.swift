@@ -10,8 +10,7 @@ import CoreData
 class CoredataStorage {
     static let shared = CoredataStorage()
 
-    private init(){}
-    
+    private init() {}
     private lazy var context = presistanceContainer.viewContext
     private lazy var presistanceContainer: NSPersistentContainer = {
         let container =  NSPersistentContainer(name: "Products")
@@ -23,32 +22,31 @@ class CoredataStorage {
         }
         return container
     }()
-    
+
     func save() {
-        if context.hasChanges{
-            do{
+        if context.hasChanges {
+            do {
                 try context.save()
                 print("Saved")
-            }
-            catch{
+            } catch {
                 print(error.localizedDescription)
                 fatalError("can't save")
             }
         }
     }
-    
-    
-    //MARK: - Creating Entities 
-    func createProduct(storedProduct: ProductEntity){
+
+    // MARK: - Creating Entities 
+    func createProduct(storedProduct: ProductEntity) {
         let product = Product(context: context)
         product.id = Int32(storedProduct.id)
         product.category = createCategory(storedCategory: storedProduct.category)
         product.price = Double(storedProduct.price)
         product.name = storedProduct.title
         product.info = storedProduct.description
+        product.images = storedProduct.images.first?.absoluteString
         save()
     }
-    
+
     @discardableResult
     func createCategory(storedCategory: CategoryEntity) -> Category {
         let category = Category(context: context)

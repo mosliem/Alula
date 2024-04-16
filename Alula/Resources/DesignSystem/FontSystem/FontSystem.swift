@@ -8,20 +8,23 @@
 import UIKit
 
 enum FontSystem {
-    case NeueHaasBold
-    case NeueHaasMedui
-    case NeueHaasRoman
+    case defaultFont
+    case neueHaasBold
+    case neueHaasMedui
+    case neueHaasRoman
 }
 
 extension FontSystem {
     static func font( _ font: FontSystem, size: CGFloat) -> UIFont? {
         switch font {
-            case .NeueHaasBold:
-                return UIFont(name: "NeueHaasDisplayBold", size: size)
-            case .NeueHaasMedui:
-                return UIFont(name: "NeueHaasDisplayMediu", size: size)
-            case .NeueHaasRoman:
-                return UIFont(name: "NeueHaasDisplayRoman", size: size)
+        case .neueHaasBold:
+            return UIFont(name: "NeueHaasDisplay-Bold", size: size)
+        case .neueHaasMedui:
+            return UIFont(name: "NeueHaasDisplay-Mediu", size: size)
+        case .neueHaasRoman:
+            return UIFont(name: "NeueHaasDisplay-Roman", size: size)
+        case .defaultFont:
+            return UIFont.systemFont(ofSize: size, weight: .medium)
         }
     }
 }

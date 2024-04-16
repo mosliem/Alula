@@ -7,9 +7,8 @@
 
 import Foundation
 
-
 struct HomeAPIEndpoint {
-    static func HomeEndpoint() -> Endpoint {
+    static func homeEndpoint() -> Endpoint {
         return Endpoint(
             schema: "https",
             host: "api.escuelajs.co",

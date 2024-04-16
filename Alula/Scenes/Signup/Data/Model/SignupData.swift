@@ -13,7 +13,7 @@ struct SignupData {
     var password: String
     var avatar: String
     var role: String
-    
+
     var signupDic: [String: String] {
         return [
             "name": name,

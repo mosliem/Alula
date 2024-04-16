@@ -8,16 +8,14 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewProtocol {
-    
+
     var viewModel: HomeViewModelProtocol!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
     /*
     // MARK: - Navigation

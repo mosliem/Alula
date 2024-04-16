@@ -9,12 +9,12 @@ import Foundation
 import Utilits
 
 struct SignupAPIEndpoint {
-    static func signup() -> Requsetable{
+    static func signup() -> Requsetable {
         return Endpoint(
             schema: "https",
             host: "api.escuelajs.co",
             path: SignupApiPath.signup,
-            headers:[
+            headers: [
                 "Content-Type": "application/json"
             ],
             httpMethod: .post

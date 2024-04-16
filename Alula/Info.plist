@@ -4,9 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>NeueHaasDisplayBold.ttf</string>
-		<string>NeueHaasDisplayMediu.ttf</string>
-		<string>NeueHaasDisplayRoman.ttf</string>
+		<string>NeueRoman.ttf</string>
+		<string>NeueMediu.ttf</string>
+		<string>NeueBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -9,20 +9,20 @@ import Utilits
 import Foundation
 
 class NetworkService {
-    
+
     static let shared = NetworkService()
-    private init(){}
-    
+    private init() {}
+
     func request<ModelType: Codable> (
         endpoint: Requsetable,
         model: ModelType.Type,
         body: [String: String]? = nil
     ) async throws -> ModelType {
-        
+
         var url: URL
         var request: URLRequest
-        
-        do{
+
+        do {
             url = try buildUrl(
                 scheme: endpoint.schema,
                 host: endpoint.host,
@@ -30,49 +30,47 @@ class NetworkService {
                 queryItems: endpoint.queryParameters,
                 port: endpoint.port
             )
-            
+
             request = try buildRequest(
                 url: url,
                 httpMethod: endpoint.httpMethod,
                 httpBody: body,
                 headers: endpoint.headers
             )
-            
-            
-        }
-        catch {
+
+        } catch {
             throw error
         }
-        
+
         return try await executeRequest(request: request, model: model)
     }
-    
+
     private func buildUrl(
         scheme: String,
         host: String,
         path: String,
         queryItems: [String: Any]? = nil,
         port: Int? = nil
-    ) throws -> URL{
-        
+    ) throws -> URL {
+
         let fullHost = scheme + "://" + host
         let hostUrl = URL(string: fullHost)
-        
+
         guard let fullUrl = URL(string: path, relativeTo: hostUrl) else {
             throw NetworkError.urlError
         }
-        
+
         var urlComp = URLComponents(url: fullUrl, resolvingAgainstBaseURL: true)
-        
+
         if let port {
             urlComp?.port = port
         }
-        
-        //MARK: - query
+
+        // MARK: - query
         if let queryItems {
             var parameters = [URLQueryItem]()
             for query in queryItems {
-                
+
                 parameters.append(
                     URLQueryItem(
                         name: query.key,
@@ -82,63 +80,61 @@ class NetworkService {
             }
             urlComp?.queryItems = parameters
         }
-        
+
         guard let url = urlComp?.url else {
             throw NetworkError.urlError
         }
-        
+
         return url
     }
-    
-    //MARK: - request
-    
+
+    // MARK: - request
+
     private func buildRequest(
         url: URL,
         httpMethod: HTTPMethod,
         httpBody: [String: String]?,
         headers: [String: String]?
-    ) throws -> URLRequest{
-        
+    ) throws -> URLRequest {
+
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
         request.allHTTPHeaderFields = headers
-        
+
         guard let httpBody else {
             return request
         }
-        
+
         do {
             request.httpBody = try JSONEncoder().encode(httpBody)
-        }
-        catch{
+        } catch {
             throw NetworkError.encodingFailed
         }
-        
+
         return request
     }
-    
-    //MARK: - execution
+
+    // MARK: - execution
     private func executeRequest<ModelType: Codable>(
         request: URLRequest,
         model: ModelType.Type
-    ) async throws -> ModelType{
-        
+    ) async throws -> ModelType {
+
         let (data, response) = try await URLSession.shared.data(for: request)
-        
+
         guard let response = response as? HTTPURLResponse else {
             throw NetworkError.requestFailed
         }
-        
+
         guard response.statusCode < 300 else {
             throw NetworkError.custom(statusCode: response.statusCode)
         }
-        
+
         do {
             return try JSONDecoder().decode(model.self, from: data)
-        }
-        catch{
+        } catch {
             throw NetworkError.decodingError
         }
     }
-    
+
 }

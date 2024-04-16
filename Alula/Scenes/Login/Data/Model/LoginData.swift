@@ -10,7 +10,7 @@ import Foundation
 struct LoginData {
     var email: String
     var password: String
-    
+
     var loginDic: [String: String] {
         return [
             "email": email,
@@ -18,5 +18,3 @@ struct LoginData {
         ]
     }
 }
-
-

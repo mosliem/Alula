@@ -10,9 +10,6 @@
 		550FE11D2BBD257900F619E2 /* IconDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */; };
 		550FE1202BBD2DDC00F619E2 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */; };
 		550FE1232BBD328800F619E2 /* FontSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE1222BBD328800F619E2 /* FontSystem.swift */; };
-		550FE12E2BBD3E1700F619E2 /* NeueHaasDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */; };
-		550FE12F2BBD3E1700F619E2 /* NeueHaasDisplayMediu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */; };
-		550FE1302BBD3E1700F619E2 /* NeueHaasDisplayRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */; };
 		550FE1382BBD557D00F619E2 /* HomeAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE1372BBD557D00F619E2 /* HomeAPIEndpoints.swift */; };
 		550FE13B2BBD55E100F619E2 /* ProductDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE13A2BBD55E100F619E2 /* ProductDto.swift */; };
 		550FE13F2BBD577A00F619E2 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550FE13E2BBD577A00F619E2 /* HomeRepository.swift */; };
@@ -33,6 +30,9 @@
 		5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA912BBEEA1000BF292F /* HomeApiPath.swift */; };
 		5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA932BBEEAF700BF292F /* LoginApiPath.swift */; };
 		5529BA962BBEEB5500BF292F /* SignupApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA952BBEEB5500BF292F /* SignupApiPath.swift */; };
+		554805F12BCE0D23000E60B0 /* NeueRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */; };
+		554805F22BCE0D23000E60B0 /* NeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EF2BCE0D23000E60B0 /* NeueBold.ttf */; };
+		554805F32BCE0D23000E60B0 /* NeueMediu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805F02BCE0D23000E60B0 /* NeueMediu.ttf */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -80,9 +80,6 @@
 		550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDesignSystem.swift; sourceTree = "<group>"; };
 		550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
 		550FE1222BBD328800F619E2 /* FontSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSystem.swift; sourceTree = "<group>"; };
-		550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayRoman.ttf; sourceTree = "<group>"; };
-		550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayBold.ttf; sourceTree = "<group>"; };
-		550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueHaasDisplayMediu.ttf; sourceTree = "<group>"; };
 		550FE1372BBD557D00F619E2 /* HomeAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIEndpoints.swift; sourceTree = "<group>"; };
 		550FE13A2BBD55E100F619E2 /* ProductDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDto.swift; sourceTree = "<group>"; };
 		550FE13E2BBD577A00F619E2 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
@@ -103,6 +100,9 @@
 		5529BA912BBEEA1000BF292F /* HomeApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiPath.swift; sourceTree = "<group>"; };
 		5529BA932BBEEAF700BF292F /* LoginApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiPath.swift; sourceTree = "<group>"; };
 		5529BA952BBEEB5500BF292F /* SignupApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupApiPath.swift; sourceTree = "<group>"; };
+		554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueRoman.ttf; sourceTree = "<group>"; };
+		554805EF2BCE0D23000E60B0 /* NeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueBold.ttf; sourceTree = "<group>"; };
+		554805F02BCE0D23000E60B0 /* NeueMediu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueMediu.ttf; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 		550FE1272BBD387A00F619E2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				550FE1292BBD389800F619E2 /* NeueHaasDisplayBold.ttf */,
-				550FE12A2BBD389800F619E2 /* NeueHaasDisplayMediu.ttf */,
-				550FE1282BBD389800F619E2 /* NeueHaasDisplayRoman.ttf */,
+				554805EF2BCE0D23000E60B0 /* NeueBold.ttf */,
+				554805F02BCE0D23000E60B0 /* NeueMediu.ttf */,
+				554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -753,6 +753,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55F109CD2BBCBB7B00ECCA6B /* Build configuration list for PBXNativeTarget "Alula" */;
 			buildPhases = (
+				556FE3842BCDDB7A002C5D15 /* Lint Sources */,
 				55F109B52BBCBB7900ECCA6B /* Sources */,
 				55F109B62BBCBB7900ECCA6B /* Frameworks */,
 				55F109B72BBCBB7900ECCA6B /* Resources */,
@@ -810,11 +811,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				550FE12E2BBD3E1700F619E2 /* NeueHaasDisplayBold.ttf in Resources */,
-				550FE12F2BBD3E1700F619E2 /* NeueHaasDisplayMediu.ttf in Resources */,
-				550FE1302BBD3E1700F619E2 /* NeueHaasDisplayRoman.ttf in Resources */,
 				55F10A332BBCD27600ECCA6B /* LoginViewController.xib in Resources */,
 				55F10A4A2BBCF3FB00ECCA6B /* FloatingLabelTextField.xib in Resources */,
+				554805F12BCE0D23000E60B0 /* NeueRoman.ttf in Resources */,
+				554805F32BCE0D23000E60B0 /* NeueMediu.ttf in Resources */,
+				554805F22BCE0D23000E60B0 /* NeueBold.ttf in Resources */,
 				55F10A052BBCC91600ECCA6B /* SignupViewController.xib in Resources */,
 				55F109C92BBCBB7B00ECCA6B /* LaunchScreen.storyboard in Resources */,
 				55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */,
@@ -823,6 +824,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		556FE3842BCDDB7A002C5D15 /* Lint Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Lint Sources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55F109B52BBCBB7900ECCA6B /* Sources */ = {
@@ -940,7 +963,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1003,7 +1026,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

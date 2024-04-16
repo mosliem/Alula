@@ -15,5 +15,3 @@ struct ProductEntity {
     var category: CategoryEntity
     var images: [URL]
 }
-
-

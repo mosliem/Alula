@@ -7,23 +7,22 @@
 
 import Foundation
 
+class Observable<State> {
 
-class Observable<State>{
-    
     var value: State {
-        didSet{
+        didSet {
             observer?(value)
         }
     }
-    
-    var observer: ((State) -> ())? {
-        didSet{
+
+    var observer: ((State) -> Void)? {
+        didSet {
             observer?(value)
         }
     }
-    
+
     init(_ wrappedValue: State) {
         self.value = wrappedValue
     }
-    
+
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol SignupViewProtocol: AnyObject {
     var viewModel: SignupViewModelProtocol! { get set }
 }
@@ -21,5 +20,5 @@ protocol SignupViewModelInputProtocol: AnyObject {
 }
 
 protocol SignupViewModelOutputProtocol: AnyObject {
-        
+
 }

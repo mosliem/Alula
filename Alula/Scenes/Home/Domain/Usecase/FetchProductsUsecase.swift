@@ -8,20 +8,15 @@
 import Foundation
 
 class FetchProductsUsecase: FetchProductsUsecaseProtocol {
-    
     let homeRepository: HomeRepositoryProtocol
 
     init(homeRepo: HomeRepositoryProtocol) {
         self.homeRepository = homeRepo
     }
-    
     func fetchProducts() {
-        
-        let endpoint = HomeAPIEndpoint.HomeEndpoint()
-        
+        let endpoint = HomeAPIEndpoint.homeEndpoint()
         homeRepository.getProducts(endpoint: endpoint)
             .sink { completion in
-            
                 switch completion {
                 case .finished:
                     break
@@ -35,6 +30,4 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
             }
             .cancel()
     }
-    
-    
 }

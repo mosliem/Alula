@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 struct ProductDto: Codable {
     var id: Int?
     var title: String?
@@ -18,22 +16,22 @@ struct ProductDto: Codable {
     var images: [URL]?
     var creationAt: String?
     var updatedAt: String?
-    
+
 }
 
 extension ProductDto {
-    func toDomain() -> ProductEntity{
+    func toDomain() -> ProductEntity {
         .init(id: id ?? 0,
               title: title ?? "",
               price: price ?? 0,
               description: description ?? "",
-              category: category?.toDomain() ?? CategoryEntity(id: 10, name: "",image: URL(string: "")!),
+              category: category?.toDomain() ?? CategoryEntity(id: 10, name: "", image: URL(string: "")!),
               images: []
         )
     }
 }
 
-struct CategoryDto: Codable{
+struct CategoryDto: Codable {
     var id: Int?
     var name: String?
     var image: URL?

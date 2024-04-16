@@ -12,27 +12,26 @@ protocol SignupCoordinatorProtocol {
 }
 
 class SignupCoordinator: Coordinator {
-    
+
     var navigationController: UINavigationController
     var parent: AuthCoordinator
-    
+
     init(navigationController: UINavigationController, parent: AuthCoordinator) {
         self.navigationController = navigationController
         self.parent = parent
     }
-    
+
     func start(animated: Bool) {
-        let vc = SignupViewController()
+        let viewController = SignupViewController()
 
         let repository = SignupRepository()
         let usecase = SignupUsecase(repository: repository)
         let viewModel = SignupViewModel(signupUsecase: usecase, coordinator: self)
-        vc.viewModel = viewModel
-        
-        navigationController.pushViewController(vc, animated: true)
+        viewController.viewModel = viewModel
+
+        navigationController.pushViewController(viewController, animated: true)
     }
-    
-    
+
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {

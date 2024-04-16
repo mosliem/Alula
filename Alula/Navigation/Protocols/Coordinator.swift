@@ -6,7 +6,7 @@
 
 import UIKit
 
-//Base functionality for all coordinators
+// Base functionality for all coordinators
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController {get set}
     func start(animated: Bool)

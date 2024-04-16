@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Utilits
 
-protocol HomeRemoteRepositoryProtocol{
+protocol HomeRemoteRepositoryProtocol {
     func getProducts(endpoint: Requsetable) -> AnyPublisher<[ProductDto], APIError>
 }
 

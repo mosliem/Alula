@@ -9,11 +9,11 @@ import UIKit
 
 class RootCoordinator: Coordinator {
     var navigationController: UINavigationController
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     func start(animated: Bool) {
        let authCoordinator = AuthCoordinator(navigationController: navigationController)
         authCoordinator.start(animated: true)

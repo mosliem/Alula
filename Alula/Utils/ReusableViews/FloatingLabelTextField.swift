@@ -10,17 +10,17 @@ import Utilits
 
 @IBDesignable
 class FloatingLabelTextField: UIView {
-    
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var iconImageView: UIImageView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         fromNib()
         customPadding()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         fromNib()
@@ -33,18 +33,18 @@ extension FloatingLabelTextField {
         placeholder: String? = "",
         title: String? = "",
         icon: IconDesignSystem? = nil
-    ){
+    ) {
         if let icon = icon?.iconImage {
             self.iconImageView.image = icon
         }
         self.textfield.placeholder = placeholder
-        
+
         self.titleLabel.text = title
     }
 }
 
 extension FloatingLabelTextField {
-    private func customPadding(){
+    private func customPadding() {
         self.textfield.addPadding(side: .left, 12)
         self.textfield.addPadding(side: .right, 30)
     }

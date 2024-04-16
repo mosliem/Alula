@@ -14,7 +14,7 @@ struct UserSignupDto: Codable {
     var password: String
     var avatar: String?
     var role: String?
-    
+
     var creationAt: String?
     var updatedAt: String?
 }

@@ -14,19 +14,17 @@ protocol ParentCoordinator: Coordinator {
 }
 
 extension ParentCoordinator {
-    
-    func addChild(_ child: Coordinator?){
+
+    func addChild(_ child: Coordinator?) {
         if let childCoordinator = child {
             childCoordinators.append(childCoordinator)
         }
     }
-    
-    func childDidFinish(_ child: Coordinator?){
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
+
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() where coordinator === child {
                 childCoordinators.remove(at: index)
                 break
-            }
         }
     }
 }

@@ -10,30 +10,28 @@ import UIKit
 protocol HomeCoordinatorProtocol {}
 
 class HomeCoordinator: Coordinator {
-    
+
     var navigationController: UINavigationController
     var parent: AuthCoordinator
-    
+
     init(navigationController: UINavigationController, parent: AuthCoordinator) {
         self.navigationController = navigationController
         self.parent = parent
     }
-    
+
     func start(animated: Bool) {
         let remoteRepo = HomeRemoteRepository()
         let localRepo = HomeLocalRepository()
-        
+
         let repository = HomeRepository(remoteRepository: remoteRepo, localRepository: localRepo)
         let usecase = FetchProductsUsecase(homeRepo: repository)
         let viewModel = HomeViewModel(usecase: usecase, coordinator: self)
-        let vc = HomeViewController()
-        vc.viewModel = viewModel
-        
-        navigationController.pushViewController(vc, animated: true)
+        let viewController = HomeViewController()
+        viewController.viewModel = viewModel
+
+        navigationController.pushViewController(viewController, animated: true)
     }
-    
-}
-
-extension HomeCoordinator: HomeCoordinatorProtocol {
 
 }
+
+extension HomeCoordinator: HomeCoordinatorProtocol {}
