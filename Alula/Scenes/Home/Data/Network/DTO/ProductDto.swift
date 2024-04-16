@@ -19,17 +19,17 @@ struct ProductDto: Codable {
 
 }
 
-extension ProductDto {
-    func toDomain() -> ProductEntity {
-        .init(id: id ?? 0,
-              title: title ?? "",
-              price: price ?? 0,
-              description: description ?? "",
-              category: category?.toDomain() ?? CategoryEntity(id: 10, name: "", image: URL(string: "")!),
-              images: []
-        )
-    }
-}
+// extension ProductDto {
+//    func toDomain() -> ProductEntity {
+//        .init(id: id ?? 0,
+//              title: title ?? "",
+//              price: price ?? 0,
+//              description: description ?? "",
+//              category: category?.toDomain() ?? CategoryEntity(id: 10, name: "", image: URL(string: "")!),
+//              images: []
+//        )
+//    }
+// }
 
 struct CategoryDto: Codable {
     var id: Int?

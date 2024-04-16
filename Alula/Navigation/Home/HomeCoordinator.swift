@@ -24,7 +24,7 @@ class HomeCoordinator: Coordinator {
         let localRepo = HomeLocalRepository()
 
         let repository = HomeRepository(remoteRepository: remoteRepo, localRepository: localRepo)
-        let usecase = FetchProductsUsecase(homeRepo: repository)
+        let usecase = FetchProductsUsecase(homeRepository: repository, adapter: ProductsAdapter())
         let viewModel = HomeViewModel(usecase: usecase, coordinator: self)
         let viewController = HomeViewController()
         viewController.viewModel = viewModel

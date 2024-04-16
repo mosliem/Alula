@@ -9,10 +9,13 @@ import Foundation
 
 class FetchProductsUsecase: FetchProductsUsecaseProtocol {
     let homeRepository: HomeRepositoryProtocol
+    let adapter: ProductsAdapterProtocol
 
-    init(homeRepo: HomeRepositoryProtocol) {
-        self.homeRepository = homeRepo
+    init(homeRepository: HomeRepositoryProtocol, adapter: ProductsAdapterProtocol) {
+        self.homeRepository = homeRepository
+        self.adapter = adapter
     }
+
     func fetchProducts() {
         let endpoint = HomeAPIEndpoint.homeEndpoint()
         homeRepository.getProducts(endpoint: endpoint)
@@ -24,8 +27,7 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
                     print(error)
                 }
             } receiveValue: { [weak self] products in
-                let products = products.map({$0.toDomain()})
-                print(products)
+                guard let products = self?.adapter.adapt(products: products) else {return}
                 self?.homeRepository.cacheProducts(products: products)
             }
             .cancel()
