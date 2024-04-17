@@ -10,25 +10,22 @@ import UIKit
 protocol HomeCoordinatorProtocol {}
 
 class HomeCoordinator: Coordinator {
-
+    var diContainter: FactoryProtocol
     var navigationController: UINavigationController
     var parent: AuthCoordinator
 
-    init(navigationController: UINavigationController, parent: AuthCoordinator) {
+    init(
+        DIContainter: FactoryProtocol,
+        navigationController: UINavigationController,
+        parent: AuthCoordinator
+    ) {
+        self.diContainter = DIContainter
         self.navigationController = navigationController
         self.parent = parent
     }
 
     func start(animated: Bool) {
-        let remoteRepo = HomeRemoteRepository()
-        let localRepo = HomeLocalRepository()
-
-        let repository = HomeRepository(remoteRepository: remoteRepo, localRepository: localRepo)
-        let usecase = FetchProductsUsecase(homeRepository: repository, adapter: ProductsAdapter())
-        let viewModel = HomeViewModel(usecase: usecase, coordinator: self)
-        let viewController = HomeViewController()
-        viewController.viewModel = viewModel
-
+        let viewController = diContainter.createVC(for: .home, with: self)
         navigationController.pushViewController(viewController, animated: true)
     }
 

@@ -12,23 +12,22 @@ protocol SignupCoordinatorProtocol {
 }
 
 class SignupCoordinator: Coordinator {
-
+    var diContainter: FactoryProtocol
     var navigationController: UINavigationController
     var parent: AuthCoordinator
 
-    init(navigationController: UINavigationController, parent: AuthCoordinator) {
+    init(
+        DIContainter: FactoryProtocol,
+        navigationController: UINavigationController,
+        parent: AuthCoordinator
+    ) {
+        self.diContainter = DIContainter
         self.navigationController = navigationController
         self.parent = parent
     }
 
     func start(animated: Bool) {
-        let viewController = SignupViewController()
-
-        let repository = SignupRepository()
-        let usecase = SignupUsecase(repository: repository)
-        let viewModel = SignupViewModel(signupUsecase: usecase, coordinator: self)
-        viewController.viewModel = viewModel
-
+        let viewController = diContainter.createVC(for: .signup, with: self)
         navigationController.pushViewController(viewController, animated: true)
     }
 

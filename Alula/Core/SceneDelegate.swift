@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         let navigationCotroller = UINavigationController()
-        let rootCoordinator = RootCoordinator(navigationController: navigationCotroller)
+        let rootCoordinator = RootCoordinator(DIContainter: DIContainer(), navigationController: navigationCotroller)
         rootCoordinator.start(animated: true)
 
         window?.rootViewController = navigationCotroller

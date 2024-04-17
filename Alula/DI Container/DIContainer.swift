@@ -8,20 +8,21 @@
 import UIKit
 
 class DIContainer: FactoryProtocol {
-    
+
     lazy var loginFactory = LoginDependenciesFactory()
     lazy var signupFactory = SignupDependenciesFactory()
     lazy var homeFactory = HomeDependenciesFactory()
-    
+
     func createVC(for scene: SceneType, with coordinator: Coordinator) -> UIViewController {
+        var viewController: UIViewController
         switch scene {
         case .home:
-            homeFactory.create(with: coordinator)
+           viewController = homeFactory.create(with: coordinator)
         case .login:
-            loginFactory.create(with: coordinator )
+            viewController = loginFactory.create(with: coordinator )
         case .signup:
-            signupFactory.create(with: coordinator)
+            viewController = signupFactory.create(with: coordinator)
         }
+        return viewController
     }
-    
 }

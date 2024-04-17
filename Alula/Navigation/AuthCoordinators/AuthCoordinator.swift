@@ -8,12 +8,21 @@
 import UIKit
 
 class AuthCoordinator: Coordinator, ParentCoordinator {
+    var diContainter: FactoryProtocol
     var parentCoordinator: RootCoordinator?
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    init(navigationController: UINavigationController) {
+
+    init(
+        DIContainter: FactoryProtocol,
+        parentCoordinator: RootCoordinator? = nil,
+        navigationController: UINavigationController
+    ) {
+        self.diContainter = DIContainter
+        self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }
+
     func start(animated: Bool) {
         signup()
     }
@@ -22,22 +31,27 @@ class AuthCoordinator: Coordinator, ParentCoordinator {
 extension AuthCoordinator {
     func login() {
         let loginCoordinator = LoginCoordinator(
+            DIContainter: diContainter,
             navigationController: navigationController,
             parent: self
         )
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start(animated: true)
     }
+
     func signup() {
         let signupCoordinator = SignupCoordinator(
+            DIContainter: diContainter,
             navigationController: navigationController,
             parent: self
         )
         childCoordinators.append(signupCoordinator)
         signupCoordinator.start(animated: true)
     }
+
     func home() {
         let homeCoordinator = HomeCoordinator(
+            DIContainter: diContainter,
             navigationController: navigationController,
             parent: self
         )

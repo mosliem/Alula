@@ -8,14 +8,19 @@
 import UIKit
 
 class RootCoordinator: Coordinator {
+    var diContainter: FactoryProtocol
     var navigationController: UINavigationController
 
-    init(navigationController: UINavigationController) {
+    init(
+        DIContainter: FactoryProtocol,
+        navigationController: UINavigationController
+    ) {
+        self.diContainter = DIContainter
         self.navigationController = navigationController
     }
 
     func start(animated: Bool) {
-       let authCoordinator = AuthCoordinator(navigationController: navigationController)
+        let authCoordinator = AuthCoordinator(DIContainter: diContainter, navigationController: navigationController)
         authCoordinator.start(animated: true)
     }
 }

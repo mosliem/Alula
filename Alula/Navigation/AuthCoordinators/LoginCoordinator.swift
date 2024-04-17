@@ -13,22 +13,22 @@ protocol LoginCoordinatorProtocol {
 }
 
 class LoginCoordinator: Coordinator {
-
+    var diContainter: FactoryProtocol
     var navigationController: UINavigationController
     var parent: AuthCoordinator
 
-    init(navigationController: UINavigationController, parent: AuthCoordinator) {
+    init(
+        DIContainter: FactoryProtocol,
+        navigationController: UINavigationController,
+        parent: AuthCoordinator
+    ) {
+        self.diContainter = DIContainter
         self.navigationController = navigationController
         self.parent = parent
     }
 
     func start(animated: Bool) {
-        let repository = LoginRepository()
-        let usecase = LoginUsecase(repository: repository)
-        let viewModel = LoginViewModel(coordinator: self, usecase: usecase)
-        let viewController = LoginViewController()
-        viewController.viewModel = viewModel
-
+        let viewController = diContainter.createVC(for: .login, with: self)
         navigationController.pushViewController(viewController, animated: true)
     }
 
