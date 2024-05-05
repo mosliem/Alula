@@ -46,6 +46,8 @@
 		55D74EF72BE6F71100D94279 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EF62BE6F71100D94279 /* login.json */; };
 		55D74EF92BE6F75500D94279 /* loginBodyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74EF82BE6F75500D94279 /* loginBodyObject.swift */; };
 		55D74EFC2BE706DA00D94279 /* loginInvalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EFB2BE706DA00D94279 /* loginInvalid.json */; };
+		55D74F002BE70E2700D94279 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EFF2BE70E2700D94279 /* GoogleService-Info.plist */; };
+		55D74F032BE70FC600D94279 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74F022BE70FC600D94279 /* FirebaseCrashlytics */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -137,6 +139,7 @@
 		55D74EF62BE6F71100D94279 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		55D74EF82BE6F75500D94279 /* loginBodyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginBodyObject.swift; sourceTree = "<group>"; };
 		55D74EFB2BE706DA00D94279 /* loginInvalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginInvalid.json; sourceTree = "<group>"; };
+		55D74EFF2BE70E2700D94279 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F109DA2BBCBE5900ECCA6B /* Utilits in Frameworks */,
+				55D74F032BE70FC600D94279 /* FirebaseCrashlytics in Frameworks */,
 				55D74EEF2BE1E63B00D94279 /* OHHTTPStubsSwift in Frameworks */,
 				55D74EED2BE1E5D000D94279 /* OHHTTPStubs in Frameworks */,
 			);
@@ -424,7 +428,7 @@
 		55D74EDD2BE1B57700D94279 /* AlulaTests */ = {
 			isa = PBXGroup;
 			children = (
-				55D74EFE2BE7082F00D94279 /* Signup */,
+				55D74EFE2BE7082F00D94279 /* Login */,
 			);
 			path = AlulaTests;
 			sourceTree = "<group>";
@@ -455,12 +459,12 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
-		55D74EFE2BE7082F00D94279 /* Signup */ = {
+		55D74EFE2BE7082F00D94279 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				55D74EE52BE1C0D400D94279 /* NetworkServiceTest */,
 			);
-			path = Signup;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		55F109B02BBCBB7900ECCA6B = {
@@ -493,6 +497,7 @@
 				55F109D02BBCBC1000ECCA6B /* Core */,
 				55F109D72BBCBC7E00ECCA6B /* Resources */,
 				55F109CA2BBCBB7B00ECCA6B /* Info.plist */,
+				55D74EFF2BE70E2700D94279 /* GoogleService-Info.plist */,
 			);
 			path = Alula;
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 				55F109B52BBCBB7900ECCA6B /* Sources */,
 				55F109B62BBCBB7900ECCA6B /* Frameworks */,
 				55F109B72BBCBB7900ECCA6B /* Resources */,
+				55D74F042BE714F500D94279 /* Crashlytics Script */,
 			);
 			buildRules = (
 			);
@@ -907,6 +913,7 @@
 				55F109D92BBCBE5900ECCA6B /* Utilits */,
 				55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */,
 				55D74EEE2BE1E63B00D94279 /* OHHTTPStubsSwift */,
+				55D74F022BE70FC600D94279 /* FirebaseCrashlytics */,
 			);
 			productName = Alula;
 			productReference = 55F109B92BBCBB7900ECCA6B /* Alula.app */;
@@ -944,6 +951,7 @@
 			packageReferences = (
 				55F109D82BBCBE5900ECCA6B /* XCLocalSwiftPackageReference "../iOSProjects/Utilits" */,
 				55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				55D74F012BE70FC600D94279 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 55F109BA2BBCBB7900ECCA6B /* Products */;
 			projectDirPath = "";
@@ -976,6 +984,7 @@
 				554805F22BCE0D23000E60B0 /* NeueBold.ttf in Resources */,
 				55F10A052BBCC91600ECCA6B /* SignupViewController.xib in Resources */,
 				55F109C92BBCBB7B00ECCA6B /* LaunchScreen.storyboard in Resources */,
+				55D74F002BE70E2700D94279 /* GoogleService-Info.plist in Resources */,
 				55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */,
 				550FE15D2BBD618B00F619E2 /* HomeViewController.xib in Resources */,
 			);
@@ -1002,6 +1011,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		55D74F042BE714F500D94279 /* Crashlytics Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Crashlytics Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1182,7 +1214,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1369,6 +1401,14 @@
 				version = 9.1.0;
 			};
 		};
+		55D74F012BE70FC600D94279 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1386,6 +1426,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
 			productName = OHHTTPStubs;
+		};
+		55D74F022BE70FC600D94279 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55D74F012BE70FC600D94279 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		55F109D92BBCBE5900ECCA6B /* Utilits */ = {
 			isa = XCSwiftPackageProductDependency;
