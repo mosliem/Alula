@@ -11,6 +11,9 @@ import Foundation
 class NetworkService {
 
     static let shared = NetworkService()
+
+    var url: URL?
+    var request: URLRequest?
     private init() {}
 
     func request<ModelType: Codable> (
@@ -18,9 +21,6 @@ class NetworkService {
         model: ModelType.Type,
         body: [String: String]? = nil
     ) async throws -> ModelType {
-
-        var url: URL
-        var request: URLRequest
 
         do {
             url = try buildUrl(
@@ -32,7 +32,7 @@ class NetworkService {
             )
 
             request = try buildRequest(
-                url: url,
+                url: url ?? URL(string: "")!,
                 httpMethod: endpoint.httpMethod,
                 httpBody: body,
                 headers: endpoint.headers
@@ -42,10 +42,10 @@ class NetworkService {
             throw error
         }
 
-        return try await executeRequest(request: request, model: model)
+        return try await executeRequest(request: request!, model: model)
     }
 
-    private func buildUrl(
+    func buildUrl(
         scheme: String,
         host: String,
         path: String,
@@ -90,7 +90,7 @@ class NetworkService {
 
     // MARK: - request
 
-    private func buildRequest(
+    func buildRequest(
         url: URL,
         httpMethod: HTTPMethod,
         httpBody: [String: String]?,
@@ -115,7 +115,7 @@ class NetworkService {
     }
 
     // MARK: - execution
-    private func executeRequest<ModelType: Codable>(
+    func executeRequest<ModelType: Codable>(
         request: URLRequest,
         model: ModelType.Type
     ) async throws -> ModelType {

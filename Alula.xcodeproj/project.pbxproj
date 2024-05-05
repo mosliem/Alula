@@ -39,6 +39,13 @@
 		555BF3672BCF3EE30015794E /* SignupDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */; };
 		555BF3692BCF3F950015794E /* HomeDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */; };
 		5578B0F22BCEED7700EE2471 /* ProductsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */; };
+		55D74EE92BE1C1BA00D94279 /* LoginNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74EE82BE1C1BA00D94279 /* LoginNetworkServiceTests.swift */; };
+		55D74EED2BE1E5D000D94279 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */; };
+		55D74EEF2BE1E63B00D94279 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74EEE2BE1E63B00D94279 /* OHHTTPStubsSwift */; };
+		55D74EF52BE6ED4B00D94279 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74EF42BE6ED4B00D94279 /* OHHTTPStubs */; };
+		55D74EF72BE6F71100D94279 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EF62BE6F71100D94279 /* login.json */; };
+		55D74EF92BE6F75500D94279 /* loginBodyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74EF82BE6F75500D94279 /* loginBodyObject.swift */; };
+		55D74EFC2BE706DA00D94279 /* loginInvalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EFB2BE706DA00D94279 /* loginInvalid.json */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -82,6 +89,16 @@
 		55F10A4C2BBCF50500ECCA6B /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F10A4B2BBCF50500ECCA6B /* FloatingLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		55D74EE02BE1B57700D94279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55F109B12BBCBB7900ECCA6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55F109B82BBCBB7900ECCA6B;
+			remoteInfo = Alula;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		550FE11C2BBD257900F619E2 /* IconDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDesignSystem.swift; sourceTree = "<group>"; };
 		550FE11F2BBD2DDC00F619E2 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
@@ -115,6 +132,11 @@
 		555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDependenciesFactory.swift; sourceTree = "<group>"; };
 		555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesFactory.swift; sourceTree = "<group>"; };
 		5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAdapter.swift; sourceTree = "<group>"; };
+		55D74EDC2BE1B57700D94279 /* AlulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D74EE82BE1C1BA00D94279 /* LoginNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkServiceTests.swift; sourceTree = "<group>"; };
+		55D74EF62BE6F71100D94279 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		55D74EF82BE6F75500D94279 /* loginBodyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginBodyObject.swift; sourceTree = "<group>"; };
+		55D74EFB2BE706DA00D94279 /* loginInvalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginInvalid.json; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,11 +182,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		55D74ED92BE1B57700D94279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D74EF52BE6ED4B00D94279 /* OHHTTPStubs in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55F109B62BBCBB7900ECCA6B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				55F109DA2BBCBE5900ECCA6B /* Utilits in Frameworks */,
+				55D74EEF2BE1E63B00D94279 /* OHHTTPStubsSwift in Frameworks */,
+				55D74EED2BE1E5D000D94279 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +421,55 @@
 			path = Adapter;
 			sourceTree = "<group>";
 		};
+		55D74EDD2BE1B57700D94279 /* AlulaTests */ = {
+			isa = PBXGroup;
+			children = (
+				55D74EFE2BE7082F00D94279 /* Signup */,
+			);
+			path = AlulaTests;
+			sourceTree = "<group>";
+		};
+		55D74EE52BE1C0D400D94279 /* NetworkServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				55D74EFA2BE7069C00D94279 /* MockData */,
+				55D74EE82BE1C1BA00D94279 /* LoginNetworkServiceTests.swift */,
+			);
+			path = NetworkServiceTest;
+			sourceTree = "<group>";
+		};
+		55D74EEB2BE1E5D000D94279 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55D74EFA2BE7069C00D94279 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				55D74EF82BE6F75500D94279 /* loginBodyObject.swift */,
+				55D74EFB2BE706DA00D94279 /* loginInvalid.json */,
+				55D74EF62BE6F71100D94279 /* login.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		55D74EFE2BE7082F00D94279 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				55D74EE52BE1C0D400D94279 /* NetworkServiceTest */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		55F109B02BBCBB7900ECCA6B = {
 			isa = PBXGroup;
 			children = (
 				55F109BB2BBCBB7900ECCA6B /* Alula */,
+				55D74EDD2BE1B57700D94279 /* AlulaTests */,
 				55F109BA2BBCBB7900ECCA6B /* Products */,
+				55D74EEB2BE1E5D000D94279 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				55F109B92BBCBB7900ECCA6B /* Alula.app */,
+				55D74EDC2BE1B57700D94279 /* AlulaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -791,6 +868,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		55D74EDB2BE1B57700D94279 /* AlulaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D74EE42BE1B57700D94279 /* Build configuration list for PBXNativeTarget "AlulaTests" */;
+			buildPhases = (
+				55D74ED82BE1B57700D94279 /* Sources */,
+				55D74ED92BE1B57700D94279 /* Frameworks */,
+				55D74EDA2BE1B57700D94279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55D74EE12BE1B57700D94279 /* PBXTargetDependency */,
+			);
+			name = AlulaTests;
+			packageProductDependencies = (
+				55D74EF42BE6ED4B00D94279 /* OHHTTPStubs */,
+			);
+			productName = AlulaTests;
+			productReference = 55D74EDC2BE1B57700D94279 /* AlulaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		55F109B82BBCBB7900ECCA6B /* Alula */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55F109CD2BBCBB7B00ECCA6B /* Build configuration list for PBXNativeTarget "Alula" */;
@@ -807,6 +905,8 @@
 			name = Alula;
 			packageProductDependencies = (
 				55F109D92BBCBE5900ECCA6B /* Utilits */,
+				55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */,
+				55D74EEE2BE1E63B00D94279 /* OHHTTPStubsSwift */,
 			);
 			productName = Alula;
 			productReference = 55F109B92BBCBB7900ECCA6B /* Alula.app */;
@@ -822,6 +922,11 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					55D74EDB2BE1B57700D94279 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+						TestTargetID = 55F109B82BBCBB7900ECCA6B;
+					};
 					55F109B82BBCBB7900ECCA6B = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -838,17 +943,28 @@
 			mainGroup = 55F109B02BBCBB7900ECCA6B;
 			packageReferences = (
 				55F109D82BBCBE5900ECCA6B /* XCLocalSwiftPackageReference "../iOSProjects/Utilits" */,
+				55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 55F109BA2BBCBB7900ECCA6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				55F109B82BBCBB7900ECCA6B /* Alula */,
+				55D74EDB2BE1B57700D94279 /* AlulaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		55D74EDA2BE1B57700D94279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D74EF72BE6F71100D94279 /* login.json in Resources */,
+				55D74EFC2BE706DA00D94279 /* loginInvalid.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55F109B72BBCBB7900ECCA6B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -890,6 +1006,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		55D74ED82BE1B57700D94279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D74EF92BE6F75500D94279 /* loginBodyObject.swift in Sources */,
+				55D74EE92BE1C1BA00D94279 /* LoginNetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55F109B52BBCBB7900ECCA6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -962,6 +1087,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		55D74EE12BE1B57700D94279 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55F109B82BBCBB7900ECCA6B /* Alula */;
+			targetProxy = 55D74EE02BE1B57700D94279 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		55F109C72BBCBB7B00ECCA6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -974,6 +1107,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		55D74EE22BE1B57700D94279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCD4XHJF85;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohamedSliem.AlulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alula.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Alula";
+			};
+			name = Debug;
+		};
+		55D74EE32BE1B57700D94279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCD4XHJF85;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohamedSliem.AlulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alula.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Alula";
+			};
+			name = Release;
+		};
 		55F109CB2BBCBB7B00ECCA6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1150,6 +1324,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		55D74EE42BE1B57700D94279 /* Build configuration list for PBXNativeTarget "AlulaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D74EE22BE1B57700D94279 /* Debug */,
+				55D74EE32BE1B57700D94279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55F109B42BBCBB7900ECCA6B /* Build configuration list for PBXProject "Alula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1177,7 +1360,33 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = exactVersion;
+				version = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		55D74EEE2BE1E63B00D94279 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+		55D74EF42BE6ED4B00D94279 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
 		55F109D92BBCBE5900ECCA6B /* Utilits */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Utilits;
