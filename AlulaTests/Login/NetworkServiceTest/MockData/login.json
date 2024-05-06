@@ -1,11 +1,5 @@
 {
-    "id": 10,
-    "name": "Nicolas",
-    "email": "nico@gmail.com",
-    "password": "1234",
-    "avatar": "https://picsum.photos/800",
-    "role": "customer",
-    "creationAt": "20/4/2024",
-    "updatedAt": "21/4/2024"
+    "access_token" : "dlfkajdfklj;akldjfka;jf3o23o4",
+    "refresh_token" : "owerofkoqrfjopqjeo1231021e3"
 }
 

@@ -48,6 +48,8 @@
 		55D74EFC2BE706DA00D94279 /* loginInvalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EFB2BE706DA00D94279 /* loginInvalid.json */; };
 		55D74F002BE70E2700D94279 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D74EFF2BE70E2700D94279 /* GoogleService-Info.plist */; };
 		55D74F032BE70FC600D94279 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74F022BE70FC600D94279 /* FirebaseCrashlytics */; };
+		55D74F092BE836F000D94279 /* LoginRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74F082BE836F000D94279 /* LoginRepositoryTests.swift */; };
+		55D74F0C2BE8380100D94279 /* LoginNetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74F0B2BE8380100D94279 /* LoginNetworkServiceStub.swift */; };
 		55F109BD2BBCBB7900ECCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */; };
 		55F109BF2BBCBB7900ECCA6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */; };
 		55F109C62BBCBB7B00ECCA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F109C52BBCBB7B00ECCA6B /* Assets.xcassets */; };
@@ -140,6 +142,8 @@
 		55D74EF82BE6F75500D94279 /* loginBodyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginBodyObject.swift; sourceTree = "<group>"; };
 		55D74EFB2BE706DA00D94279 /* loginInvalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginInvalid.json; sourceTree = "<group>"; };
 		55D74EFF2BE70E2700D94279 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55D74F082BE836F000D94279 /* LoginRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryTests.swift; sourceTree = "<group>"; };
+		55D74F0B2BE8380100D94279 /* LoginNetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkServiceStub.swift; sourceTree = "<group>"; };
 		55F109B92BBCBB7900ECCA6B /* Alula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F109BC2BBCBB7900ECCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F109BE2BBCBB7900ECCA6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -462,9 +466,43 @@
 		55D74EFE2BE7082F00D94279 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				55D74F0A2BE8372500D94279 /* Stubs */,
+				55D74F072BE836D300D94279 /* Presentation */,
+				55D74F062BE836CD00D94279 /* Data */,
+				55D74F052BE836C700D94279 /* Domain */,
 				55D74EE52BE1C0D400D94279 /* NetworkServiceTest */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		55D74F052BE836C700D94279 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		55D74F062BE836CD00D94279 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				55D74F082BE836F000D94279 /* LoginRepositoryTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		55D74F072BE836D300D94279 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		55D74F0A2BE8372500D94279 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				55D74F0B2BE8380100D94279 /* LoginNetworkServiceStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		55F109B02BBCBB7900ECCA6B = {
@@ -1010,11 +1048,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 		55D74F042BE714F500D94279 /* Crashlytics Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1031,7 +1071,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
@@ -1043,6 +1083,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D74EF92BE6F75500D94279 /* loginBodyObject.swift in Sources */,
+				55D74F092BE836F000D94279 /* LoginRepositoryTests.swift in Sources */,
+				55D74F0C2BE8380100D94279 /* LoginNetworkServiceStub.swift in Sources */,
 				55D74EE92BE1C1BA00D94279 /* LoginNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

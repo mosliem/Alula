@@ -8,9 +8,6 @@
 import Foundation
 
 let loginBodyObject: [String: String] = [
-  "name": "Nicolas",
   "email": "nico@gmail.com",
-  "password": "1234",
-  "avatar": "https://picsum.photos/800",
-  "role": "customer"
+  "password": "1234"
 ]

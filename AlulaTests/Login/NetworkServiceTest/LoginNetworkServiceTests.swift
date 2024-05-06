@@ -14,8 +14,17 @@ import OHHTTPStubsSwift
 
 final class LoginNetworkServiceTests: XCTestCase {
 
-    let endpoint = SignupAPIEndpoint.signup()
-
+    let endpoint = LoginAPIEndpoint.loginEndpoint()
+    var networkStub: LoginNetworkServiceStub?
+    
+    override func setUp() {
+        networkStub = LoginNetworkServiceStub()
+    }
+    
+    override func tearDown() {
+        networkStub = nil
+    }
+    
     func testSchema() {
         let schema = endpoint.schema
         let expectedSchema = "https"
@@ -30,7 +39,7 @@ final class LoginNetworkServiceTests: XCTestCase {
 
     func testPath() {
         let path = endpoint.path
-        let expectedPath = "/api/v1/users/"
+        let expectedPath = "/api/v1/auth/login"
         XCTAssertEqual(path, expectedPath)
     }
 
@@ -58,7 +67,7 @@ final class LoginNetworkServiceTests: XCTestCase {
             port: endpoint.port
         ).absoluteString
 
-        let expectedURL = "https://api.escuelajs.co/api/v1/users/"
+        let expectedURL =  "https://api.escuelajs.co/api/v1/auth/login"
 
         XCTAssertEqual(url, expectedURL)
     }
@@ -79,7 +88,7 @@ final class LoginNetworkServiceTests: XCTestCase {
             XCTAssertThrowsError(error)
         }
 
-        let expectedURL = URL(string: "https://api.escuelajs.co/api/v1/users/")
+        let expectedURL = URL(string: "https://api.escuelajs.co/api/v1/auth/login")
         let expectedHeaders = [
             "Content-Type": "application/json"
         ]
@@ -101,49 +110,38 @@ final class LoginNetworkServiceTests: XCTestCase {
     }
 
     func testSuccessSignupRequest() async throws {
-
-        let expectedURL = "https://api.escuelajs.co/api/v1/users/"
-
-        stub(condition: isAbsoluteURLString(expectedURL)) { _ in
-            let responsePath = OHPathForFile("signup.json", type(of: self))!
-            return fixture(filePath: responsePath, status: 200, headers: nil)
-        }
-
-        var expectedResponse: UserSignupDto?
+        
+        networkStub?.loginSuccessRequestStub()
+        
+        var expectedResponse: TokenDto?
         let exception = expectation(description: "NetworkError")
 
         do {
             expectedResponse = try await NetworkService.shared.request(
                 endpoint: endpoint,
-                model: UserSignupDto.self,
+                model: TokenDto.self,
                 body: loginBodyObject
             )
             exception.fulfill()
         } catch {
-            XCTAssertThrowsError(error)
+            XCTAssertNotNil(error)
         }
 
         await fulfillment(of: [exception], timeout: 2)
         XCTAssertNotNil(expectedResponse)
-        XCTAssertTrue(expectedResponse?.id == 10)
-
     }
 
     func testFailedSignupRequest() async throws {
-        let expectedURL = "https://api.escuelajs.co/api/v1/users/"
-
-        stub(condition: isAbsoluteURLString(expectedURL)) { _ in
-            let responsePath = OHPathForFile("loginInvalid.json", type(of: self))!
-            return fixture(filePath: responsePath, status: 200, headers: nil)
-        }
-
+        
+        networkStub?.loginFailedRequestStub()
+        
         let exception = expectation(description: "Request Failed")
-        var expectedResponse: UserSignupDto?
+        var expectedResponse: TokenDto?
 
         do {
             expectedResponse = try await NetworkService.shared.request(
                 endpoint: endpoint,
-                model: UserSignupDto.self,
+                model: TokenDto.self,
                 body: loginBodyObject
             )
             XCTFail("Should not complete the request")
