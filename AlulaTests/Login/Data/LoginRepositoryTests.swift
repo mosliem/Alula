@@ -17,6 +17,7 @@ final class LoginRepositoryTests: XCTestCase {
     var networkStub: LoginNetworkServiceStub?
     
     override func setUp() {
+        super.setUp()
         loginRepository = LoginRepository()
         networkStub = LoginNetworkServiceStub()
     }
@@ -58,7 +59,7 @@ final class LoginRepositoryTests: XCTestCase {
         
         var expectedResult: TokenDto?
         
-        do{
+        do {
             expectedResult = try await loginRepository?.login(
                 endpoint: endpoint ,
                 body: loginBodyObject

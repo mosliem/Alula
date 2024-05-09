@@ -27,7 +27,16 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         self.navigationController?.navigationBar.isHidden = true
     }
 
-    private func bindViewModel() {}
+    private func bindViewModel() {
+        
+        emailTextField.textfield.bind {[weak self] email in
+            self?.viewModel.didUpdateEmail(with: email)
+        }
+        
+        passwordTextField.textfield.bind { [weak self] password in
+            self?.viewModel.didUpdatePassword(with: password)
+        }
+    }
 
     private func setupViews() {
         setupTextFields()
@@ -55,6 +64,9 @@ extension LoginViewController {
             title: "Password",
             icon: .passwordIcon
         )
+        
+        emailTextField.textfield.delegate = self
+        passwordTextField.textfield.delegate = self
     }
 
     private func setupLoginButton() {
@@ -81,4 +93,12 @@ extension LoginViewController {
         newUserButton.setAttributedTitle(title, for: .normal)
     }
 
+}
+
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

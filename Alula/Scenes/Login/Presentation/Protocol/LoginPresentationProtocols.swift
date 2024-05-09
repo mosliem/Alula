@@ -17,6 +17,9 @@ protocol LoginViewModelInputProtocol: AnyObject {
     func loginPressed()
     func viewDidLoad()
     func newUserPressed()
+    
+    func didUpdateEmail(with email: String)
+    func didUpdatePassword(with password: String)
 }
 
 protocol LoginViewModelOutputProtocol: AnyObject {

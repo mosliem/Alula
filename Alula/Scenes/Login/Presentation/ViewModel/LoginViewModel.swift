@@ -8,10 +8,14 @@
 import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
-
+    
     private var coordinator: LoginCoordinatorProtocol?
     private var usecase: LoginUsecaseProtocol
-
+    private var token: Token?
+    
+    @Email private var emailEntry: String = ""
+    @Password private var passwordEntry: String = ""
+    
     init(coordinator: LoginCoordinatorProtocol?, usecase: LoginUsecaseProtocol) {
         self.coordinator = coordinator
         self.usecase = usecase
@@ -20,13 +24,11 @@ class LoginViewModel: LoginViewModelProtocol {
     func viewDidLoad() {}
 
     func loginPressed() {
-        Task {
-            await login()
-        }
+      validateEmailPasswordEntry()
     }
 
     @MainActor
-    private func login() async {
+    func login() async {
         do {
           let token = try await usecase.execute(
                 loginData:
@@ -35,7 +37,7 @@ class LoginViewModel: LoginViewModelProtocol {
                         password: "mohamed011"
                     )
             )
-            print(token)
+            setToken(token: token)
             coordinator?.home()
         } catch {
             print(error)
@@ -46,4 +48,44 @@ class LoginViewModel: LoginViewModelProtocol {
         coordinator?.signup()
     }
 
+    private func setToken(token: Token){
+        self.token = token
+    }
+    
+    func getCurrentToken() -> Token? {
+        return token
+    }
+    
+    
+    func didUpdateEmail(with email: String) {
+        _emailEntry.wrappedValue = email
+    }
+    
+    func didUpdatePassword(with password: String) {
+        _passwordEntry.wrappedValue = password
+    }
+    
+    private func validateEmailPasswordEntry(){
+        print("valid")
+        print(_passwordEntry.projectedValue)
+        if _emailEntry.projectedValue && _passwordEntry.projectedValue {
+            print("Valid Entry")
+            Task {
+                await login()
+            }
+        } else {
+            
+            let action = AlertActionModel(
+                title: "Ok",
+                style: .default,
+                handler: nil
+            )
+            coordinator?.alert(
+                with: "Error",
+                alertMessage: "Enter valid email and password",
+                alertActions: [action]
+            )
+        }
+        
+    }
 }

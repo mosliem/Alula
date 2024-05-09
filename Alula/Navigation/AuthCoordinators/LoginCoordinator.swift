@@ -10,6 +10,8 @@ import UIKit
 protocol LoginCoordinatorProtocol {
     func signup()
     func home()
+    func alert(with alertTitle: String, alertMessage: String, alertActions: [AlertActionModel] )
+
 }
 
 class LoginCoordinator: Coordinator {
@@ -35,6 +37,28 @@ class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginCoordinatorProtocol {
+    
+    func alert(with alertTitle: String, alertMessage: String, alertActions: [AlertActionModel]) {
+        
+        let alert = UIAlertController(
+            title: alertTitle,
+            message: alertMessage,
+            preferredStyle: .alert
+        )
+        
+        for alertAction in alertActions {
+            let action = UIAlertAction(
+                title: alertAction.title,
+                style: alertAction.style,
+                handler: alertAction.handler
+            )
+            
+            alert.addAction(action)
+        }
+        
+        navigationController.present(alert, animated: true)
+    }
+    
     func signup() {
         parent.signup()
     }

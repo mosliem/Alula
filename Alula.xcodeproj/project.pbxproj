@@ -30,6 +30,12 @@
 		5529BA922BBEEA1000BF292F /* HomeApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA912BBEEA1000BF292F /* HomeApiPath.swift */; };
 		5529BA942BBEEAF700BF292F /* LoginApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA932BBEEAF700BF292F /* LoginApiPath.swift */; };
 		5529BA962BBEEB5500BF292F /* SignupApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529BA952BBEEB5500BF292F /* SignupApiPath.swift */; };
+		552FF57B2BEC38D700657310 /* LoginSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF57A2BEC38D700657310 /* LoginSceneUITests.swift */; };
+		552FF57E2BEC399C00657310 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF57D2BEC399C00657310 /* Email.swift */; };
+		552FF5802BEC39BD00657310 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF57F2BEC39BD00657310 /* Password.swift */; };
+		552FF5822BEC459D00657310 /* ObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF5812BEC459D00657310 /* ObservableTextField.swift */; };
+		552FF5922BEC503300657310 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 552FF5912BEC503300657310 /* OHHTTPStubs */; };
+		552FF5992BEC67B600657310 /* UtilsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF5982BEC67B600657310 /* UtilsModel.swift */; };
 		554805F12BCE0D23000E60B0 /* NeueRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */; };
 		554805F22BCE0D23000E60B0 /* NeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805EF2BCE0D23000E60B0 /* NeueBold.ttf */; };
 		554805F32BCE0D23000E60B0 /* NeueMediu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554805F02BCE0D23000E60B0 /* NeueMediu.ttf */; };
@@ -38,6 +44,14 @@
 		555BF3652BCF39570015794E /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3642BCF39570015794E /* FactoryProtocol.swift */; };
 		555BF3672BCF3EE30015794E /* SignupDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */; };
 		555BF3692BCF3F950015794E /* HomeDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */; };
+		555E3DC52BEAE75F004F45EF /* LoginUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DC42BEAE75F004F45EF /* LoginUsecaseTests.swift */; };
+		555E3DC92BEAFD3B004F45EF /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DC82BEAFD3B004F45EF /* LoginViewModelTests.swift */; };
+		555E3DCB2BEB03F8004F45EF /* LoginCoordinatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DCA2BEB03F8004F45EF /* LoginCoordinatorStub.swift */; };
+		555E3DCD2BEB0474004F45EF /* SignupFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DCC2BEB0474004F45EF /* SignupFactoryStub.swift */; };
+		555E3DD02BEB0AA7004F45EF /* SignUpViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DCF2BEB0AA7004F45EF /* SignUpViewModelStub.swift */; };
+		555E3DD22BEB0C93004F45EF /* LoginFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DD12BEB0C93004F45EF /* LoginFactoryStub.swift */; };
+		555E3DD42BEB0D5D004F45EF /* HomeFactoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DD32BEB0D5D004F45EF /* HomeFactoryStub.swift */; };
+		555E3DD62BEB0D6B004F45EF /* HomeViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E3DD52BEB0D6B004F45EF /* HomeViewModelStub.swift */; };
 		5578B0F22BCEED7700EE2471 /* ProductsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */; };
 		55D74EE92BE1C1BA00D94279 /* LoginNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D74EE82BE1C1BA00D94279 /* LoginNetworkServiceTests.swift */; };
 		55D74EED2BE1E5D000D94279 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */; };
@@ -94,6 +108,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		552FF5752BEC2D2D00657310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55F109B12BBCBB7900ECCA6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55F109B82BBCBB7900ECCA6B;
+			remoteInfo = Alula;
+		};
 		55D74EE02BE1B57700D94279 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 55F109B12BBCBB7900ECCA6B /* Project object */;
@@ -127,6 +148,13 @@
 		5529BA912BBEEA1000BF292F /* HomeApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiPath.swift; sourceTree = "<group>"; };
 		5529BA932BBEEAF700BF292F /* LoginApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiPath.swift; sourceTree = "<group>"; };
 		5529BA952BBEEB5500BF292F /* SignupApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupApiPath.swift; sourceTree = "<group>"; };
+		552FF56F2BEC2D2D00657310 /* AlulaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlulaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		552FF57A2BEC38D700657310 /* LoginSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneUITests.swift; sourceTree = "<group>"; };
+		552FF57D2BEC399C00657310 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		552FF57F2BEC39BD00657310 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		552FF5812BEC459D00657310 /* ObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTextField.swift; sourceTree = "<group>"; };
+		552FF5932BEC5A0000657310 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		552FF5982BEC67B600657310 /* UtilsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsModel.swift; sourceTree = "<group>"; };
 		554805EE2BCE0D23000E60B0 /* NeueRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueRoman.ttf; sourceTree = "<group>"; };
 		554805EF2BCE0D23000E60B0 /* NeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueBold.ttf; sourceTree = "<group>"; };
 		554805F02BCE0D23000E60B0 /* NeueMediu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueMediu.ttf; sourceTree = "<group>"; };
@@ -135,6 +163,14 @@
 		555BF3642BCF39570015794E /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
 		555BF3662BCF3EE30015794E /* SignupDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDependenciesFactory.swift; sourceTree = "<group>"; };
 		555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesFactory.swift; sourceTree = "<group>"; };
+		555E3DC42BEAE75F004F45EF /* LoginUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseTests.swift; sourceTree = "<group>"; };
+		555E3DC82BEAFD3B004F45EF /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		555E3DCA2BEB03F8004F45EF /* LoginCoordinatorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorStub.swift; sourceTree = "<group>"; };
+		555E3DCC2BEB0474004F45EF /* SignupFactoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFactoryStub.swift; sourceTree = "<group>"; };
+		555E3DCF2BEB0AA7004F45EF /* SignUpViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelStub.swift; sourceTree = "<group>"; };
+		555E3DD12BEB0C93004F45EF /* LoginFactoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactoryStub.swift; sourceTree = "<group>"; };
+		555E3DD32BEB0D5D004F45EF /* HomeFactoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactoryStub.swift; sourceTree = "<group>"; };
+		555E3DD52BEB0D6B004F45EF /* HomeViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelStub.swift; sourceTree = "<group>"; };
 		5578B0F12BCEED7700EE2471 /* ProductsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAdapter.swift; sourceTree = "<group>"; };
 		55D74EDC2BE1B57700D94279 /* AlulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D74EE82BE1C1BA00D94279 /* LoginNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkServiceTests.swift; sourceTree = "<group>"; };
@@ -189,6 +225,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		552FF56C2BEC2D2D00657310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552FF5922BEC503300657310 /* OHHTTPStubs in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55D74ED92BE1B57700D94279 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +445,31 @@
 			path = Network/CoreData;
 			sourceTree = "<group>";
 		};
+		552FF5702BEC2D2D00657310 /* AlulaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				552FF57A2BEC38D700657310 /* LoginSceneUITests.swift */,
+			);
+			path = AlulaUITests;
+			sourceTree = "<group>";
+		};
+		552FF57C2BEC397900657310 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				552FF57D2BEC399C00657310 /* Email.swift */,
+				552FF57F2BEC39BD00657310 /* Password.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		552FF5972BEC67A900657310 /* UtilsModel */ = {
+			isa = PBXGroup;
+			children = (
+				552FF5982BEC67B600657310 /* UtilsModel.swift */,
+			);
+			path = UtilsModel;
+			sourceTree = "<group>";
+		};
 		555BF35E2BCF2BAF0015794E /* DI Container */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +488,14 @@
 				555BF3682BCF3F950015794E /* HomeDependenciesFactory.swift */,
 			);
 			path = "DI Factory";
+			sourceTree = "<group>";
+		};
+		555E3DC72BEAFD26004F45EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				555E3DC82BEAFD3B004F45EF /* LoginViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5578B0F02BCEED4700EE2471 /* Adapter */ = {
@@ -449,6 +526,7 @@
 		55D74EEB2BE1E5D000D94279 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				552FF5932BEC5A0000657310 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +556,7 @@
 		55D74F052BE836C700D94279 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				555E3DC42BEAE75F004F45EF /* LoginUsecaseTests.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -493,6 +572,7 @@
 		55D74F072BE836D300D94279 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				555E3DC72BEAFD26004F45EF /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -501,6 +581,12 @@
 			isa = PBXGroup;
 			children = (
 				55D74F0B2BE8380100D94279 /* LoginNetworkServiceStub.swift */,
+				555E3DCA2BEB03F8004F45EF /* LoginCoordinatorStub.swift */,
+				555E3DCC2BEB0474004F45EF /* SignupFactoryStub.swift */,
+				555E3DCF2BEB0AA7004F45EF /* SignUpViewModelStub.swift */,
+				555E3DD12BEB0C93004F45EF /* LoginFactoryStub.swift */,
+				555E3DD32BEB0D5D004F45EF /* HomeFactoryStub.swift */,
+				555E3DD52BEB0D6B004F45EF /* HomeViewModelStub.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -510,6 +596,7 @@
 			children = (
 				55F109BB2BBCBB7900ECCA6B /* Alula */,
 				55D74EDD2BE1B57700D94279 /* AlulaTests */,
+				552FF5702BEC2D2D00657310 /* AlulaUITests */,
 				55F109BA2BBCBB7900ECCA6B /* Products */,
 				55D74EEB2BE1E5D000D94279 /* Frameworks */,
 			);
@@ -520,6 +607,7 @@
 			children = (
 				55F109B92BBCBB7900ECCA6B /* Alula.app */,
 				55D74EDC2BE1B57700D94279 /* AlulaTests.xctest */,
+				552FF56F2BEC2D2D00657310 /* AlulaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -582,6 +670,8 @@
 		55F109D42BBCBC4E00ECCA6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				552FF5972BEC67A900657310 /* UtilsModel */,
+				552FF57C2BEC397900657310 /* PropertyWrapper */,
 				55F10A442BBCEE4600ECCA6B /* ReusableViews */,
 				55F109DB2BBCC5BF00ECCA6B /* Binding */,
 				55F109D52BBCBC5C00ECCA6B /* Endpoint.swift */,
@@ -604,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				55F109DC2BBCC5CE00ECCA6B /* Observable.swift */,
+				552FF5812BEC459D00657310 /* ObservableTextField.swift */,
 			);
 			path = Binding;
 			sourceTree = "<group>";
@@ -911,6 +1002,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		552FF56E2BEC2D2D00657310 /* AlulaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552FF5772BEC2D2D00657310 /* Build configuration list for PBXNativeTarget "AlulaUITests" */;
+			buildPhases = (
+				552FF56B2BEC2D2D00657310 /* Sources */,
+				552FF56C2BEC2D2D00657310 /* Frameworks */,
+				552FF56D2BEC2D2D00657310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				552FF5762BEC2D2D00657310 /* PBXTargetDependency */,
+			);
+			name = AlulaUITests;
+			packageProductDependencies = (
+				552FF5912BEC503300657310 /* OHHTTPStubs */,
+			);
+			productName = AlulaUITests;
+			productReference = 552FF56F2BEC2D2D00657310 /* AlulaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		55D74EDB2BE1B57700D94279 /* AlulaTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55D74EE42BE1B57700D94279 /* Build configuration list for PBXNativeTarget "AlulaTests" */;
@@ -967,6 +1079,11 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					552FF56E2BEC2D2D00657310 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+						TestTargetID = 55F109B82BBCBB7900ECCA6B;
+					};
 					55D74EDB2BE1B57700D94279 = {
 						CreatedOnToolsVersion = 15.2;
 						LastSwiftMigration = 1520;
@@ -997,11 +1114,19 @@
 			targets = (
 				55F109B82BBCBB7900ECCA6B /* Alula */,
 				55D74EDB2BE1B57700D94279 /* AlulaTests */,
+				552FF56E2BEC2D2D00657310 /* AlulaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		552FF56D2BEC2D2D00657310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55D74EDA2BE1B57700D94279 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1078,13 +1203,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		552FF56B2BEC2D2D00657310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552FF57B2BEC38D700657310 /* LoginSceneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55D74ED82BE1B57700D94279 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555E3DCD2BEB0474004F45EF /* SignupFactoryStub.swift in Sources */,
+				555E3DD42BEB0D5D004F45EF /* HomeFactoryStub.swift in Sources */,
+				555E3DD02BEB0AA7004F45EF /* SignUpViewModelStub.swift in Sources */,
+				555E3DD22BEB0C93004F45EF /* LoginFactoryStub.swift in Sources */,
+				555E3DCB2BEB03F8004F45EF /* LoginCoordinatorStub.swift in Sources */,
 				55D74EF92BE6F75500D94279 /* loginBodyObject.swift in Sources */,
+				555E3DC52BEAE75F004F45EF /* LoginUsecaseTests.swift in Sources */,
 				55D74F092BE836F000D94279 /* LoginRepositoryTests.swift in Sources */,
 				55D74F0C2BE8380100D94279 /* LoginNetworkServiceStub.swift in Sources */,
+				555E3DC92BEAFD3B004F45EF /* LoginViewModelTests.swift in Sources */,
+				555E3DD62BEB0D6B004F45EF /* HomeViewModelStub.swift in Sources */,
 				55D74EE92BE1C1BA00D94279 /* LoginNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1096,17 +1237,20 @@
 				550FE1412BBD57D400F619E2 /* HomeRemoteRepository.swift in Sources */,
 				5578B0F22BCEED7700EE2471 /* ProductsAdapter.swift in Sources */,
 				550FE1382BBD557D00F619E2 /* HomeAPIEndpoints.swift in Sources */,
+				552FF5802BEC39BD00657310 /* Password.swift in Sources */,
 				550FE1492BBD5A9100F619E2 /* ProductEntity.swift in Sources */,
 				55F10A322BBCD27600ECCA6B /* LoginViewController.swift in Sources */,
 				55F10A072BBCC94C00ECCA6B /* SignupViewModel.swift in Sources */,
 				55F109E72BBCC66200ECCA6B /* Coordinator.swift in Sources */,
 				550FE13F2BBD577A00F619E2 /* HomeRepository.swift in Sources */,
 				555BF3602BCF2BC20015794E /* DIContainer.swift in Sources */,
+				552FF5822BEC459D00657310 /* ObservableTextField.swift in Sources */,
 				55F10A3F2BBCD42100ECCA6B /* LoginRepositoryProtocol.swift in Sources */,
 				55F109DD2BBCC5CE00ECCA6B /* Observable.swift in Sources */,
 				55F10A0B2BBCCA0B00ECCA6B /* SignupRepositoryProtocol.swift in Sources */,
 				55F10A1B2BBCCF2400ECCA6B /* TokenDto.swift in Sources */,
 				55F10A1F2BBCCF9300ECCA6B /* LoginAPIEndpoint.swift in Sources */,
+				552FF57E2BEC399C00657310 /* Email.swift in Sources */,
 				55F109F52BBCC81F00ECCA6B /* UserDto.swift in Sources */,
 				550FE1462BBD59A200F619E2 /* HomeLocalRepository.swift in Sources */,
 				55F109FB2BBCC87900ECCA6B /* SignupRepository.swift in Sources */,
@@ -1128,6 +1272,7 @@
 				55F109F22BBCC80500ECCA6B /* SignupEndpoints.swift in Sources */,
 				55F10A432BBCD48500ECCA6B /* NetworkError.swift in Sources */,
 				55F109E42BBCC64600ECCA6B /* LoginCoordinator.swift in Sources */,
+				552FF5992BEC67B600657310 /* UtilsModel.swift in Sources */,
 				55F109E02BBCC61B00ECCA6B /* SignupCoordinator.swift in Sources */,
 				55F10A372BBCD3A100ECCA6B /* LoginUsecase.swift in Sources */,
 				550FE11D2BBD257900F619E2 /* IconDesignSystem.swift in Sources */,
@@ -1162,6 +1307,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		552FF5762BEC2D2D00657310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55F109B82BBCBB7900ECCA6B /* Alula */;
+			targetProxy = 552FF5752BEC2D2D00657310 /* PBXContainerItemProxy */;
+		};
 		55D74EE12BE1B57700D94279 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 55F109B82BBCBB7900ECCA6B /* Alula */;
@@ -1181,6 +1331,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		552FF5782BEC2D2D00657310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TCD4XHJF85;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohamedSliem.AlulaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alula;
+			};
+			name = Debug;
+		};
+		552FF5792BEC2D2D00657310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCD4XHJF85;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohamedSliem.AlulaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alula;
+			};
+			name = Release;
+		};
 		55D74EE22BE1B57700D94279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1398,6 +1590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		552FF5772BEC2D2D00657310 /* Build configuration list for PBXNativeTarget "AlulaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552FF5782BEC2D2D00657310 /* Debug */,
+				552FF5792BEC2D2D00657310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55D74EE42BE1B57700D94279 /* Build configuration list for PBXNativeTarget "AlulaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1454,6 +1655,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		552FF5912BEC503300657310 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
 		55D74EEC2BE1E5D000D94279 /* OHHTTPStubs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 55D74EEA2BE1E22900D94279 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1520"
-   version = "1.7">
+   version = "2.2">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -20,6 +20,15 @@
                ReferencedContainer = "container:Alula.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -37,6 +46,17 @@
                BlueprintIdentifier = "55D74EDB2BE1B57700D94279"
                BuildableName = "AlulaTests.xctest"
                BlueprintName = "AlulaTests"
+               ReferencedContainer = "container:Alula.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "552FF56E2BEC2D2D00657310"
+               BuildableName = "AlulaUITests.xctest"
+               BlueprintName = "AlulaUITests"
                ReferencedContainer = "container:Alula.xcodeproj">
             </BuildableReference>
          </TestableReference>
