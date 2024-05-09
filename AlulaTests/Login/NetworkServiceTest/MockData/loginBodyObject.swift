@@ -8,6 +8,6 @@
 import Foundation
 
 let loginBodyObject: [String: String] = [
-  "email": "nico@gmail.com",
+  "email": "sliem@gmail.com",
   "password": "1234"
 ]

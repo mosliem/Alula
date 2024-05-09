@@ -35,17 +35,36 @@ final class GetProductsUsecaseTests: XCTestCase {
         network = GetProductsNetworkStub()
     }
     
+    override func tearDown() {
+        localRepository = nil
+        repository = nil
+        remoteRepository = nil
+        adpater = nil
+        network = nil
+        usecase = nil
+    }
+    
     func testSuccessFetchProducts(){
         
         network.getProductsSuccessRequestStub()
         
         let expection = expectation(description: "NetworkError")
+        var expectedValue: [ProductEntity]?
         
-        usecase.fetchProducts()
-        expection.fulfill()
+        usecase.fetchProducts(taskCompletion: { completion in
+            switch completion {
+            case .success:
+                break
+            case .failure(let error):
+                XCTAssertNotNil(error)
+            }
+        }, recievedValue: { products in
+            expectedValue = products
+            expection.fulfill()
+        })
         
         wait(for: [expection], timeout: 5)
-        XCTAssertNotNil(usecase.products)
+        XCTAssertNotNil(expectedValue)
     }
     
     func testFailedFetchProducts(){
@@ -53,12 +72,25 @@ final class GetProductsUsecaseTests: XCTestCase {
         network.getProductsFailedRequestStub()
         
         let expection = expectation(description: "NetworkError")
+        var expectedValue: [ProductEntity]?
+
+        usecase.fetchProducts(
+            taskCompletion: { completion in
+                switch completion {
+                case .success:
+                    break
+                case .failure(let error):
+                    expection.fulfill()
+                }
+            },
+            recievedValue: { products in
+                expectedValue = products
+                XCTFail("Should not load products")
+            })
         
-        usecase.fetchProducts()
-        expection.fulfill()
-        
+
         wait(for: [expection], timeout: 5)
-        XCTAssertNil(usecase.products)
+        XCTAssertNil(expectedValue)
     }
 }
 

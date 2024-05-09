@@ -9,5 +9,8 @@ import Foundation
 
 protocol FetchProductsUsecaseProtocol {
     var products: [ProductEntity]? { get set }
-    func fetchProducts()
+    func fetchProducts(
+        taskCompletion: @escaping (Result<Bool,Error>) -> Void,
+        recievedValue: @escaping ([ProductEntity]) -> Void
+    ) 
 }

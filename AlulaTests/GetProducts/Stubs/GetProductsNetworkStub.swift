@@ -15,18 +15,18 @@ class GetProductsNetworkStub {
     init(){}
     
     func getProductsSuccessRequestStub() {
-        let expectedURL = "https://api.escuelajs.co/api/v1/products"
+        let expectedURL = "/api/v1/products"
     
-        stub(condition: isAbsoluteURLString(expectedURL)) { _ in
+        stub(condition: isPath(expectedURL)) { _ in
             let responsePath = OHPathForFile("Products.json", type(of: self))!
             return fixture(filePath: responsePath, status: 200, headers: nil)
         }
     }
     
     func getProductsFailedRequestStub() {
-        let expectedURL = "https://api.escuelajs.co/api/v1/products"
+        let expectedURL = "/api/v1/products"
         
-        stub(condition: isAbsoluteURLString(expectedURL)) { _ in
+        stub(condition: isPath(expectedURL)) { _ in
             let responsePath = OHPathForFile("InvalidProducts.json", type(of: self))!
             return fixture(filePath: responsePath, status: 403, headers: nil)
         }

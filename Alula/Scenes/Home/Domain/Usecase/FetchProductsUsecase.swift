@@ -8,6 +8,7 @@
 import Foundation
 
 class FetchProductsUsecase: FetchProductsUsecaseProtocol {
+    
     var products: [ProductEntity]?
     
     let homeRepository: HomeRepositoryProtocol
@@ -18,7 +19,11 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
         self.adapter = adapter
     }
 
-    func fetchProducts() {
+    func fetchProducts(
+        taskCompletion: @escaping (Result<Bool,Error>) -> Void,
+        recievedValue: @escaping ([ProductEntity]) -> Void
+    ) {
+        
         let endpoint = HomeAPIEndpoint.homeEndpoint()
         homeRepository.getProducts(endpoint: endpoint)
             .sink { completion in
@@ -26,11 +31,12 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
                 case .finished:
                     break
                 case.failure(let error):
-                    print(error)
+                    taskCompletion(.failure(error))
                 }
             } receiveValue: { [weak self] products in
                 guard let products = self?.adapter.adapt(products: products) else {return}
                 self?.products = products
+                recievedValue(products)
                 self?.homeRepository.cacheProducts(products: products)
             }
             .cancel()

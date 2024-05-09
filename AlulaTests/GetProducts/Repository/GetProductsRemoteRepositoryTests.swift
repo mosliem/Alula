@@ -33,11 +33,19 @@ final class GetProductsRemoteRepositoryTests: XCTestCase {
     func testSuccessGetProducts(){
         networkStub.getProductsSuccessRequestStub()
         
-        var expectedValue: [ProductDto] = []
+        var expectedValue: [ProductDto]?
         let expection = expectation(description: "NetworkError")
         
         repository.getProducts(endpoint: endpoint)
-            .sink { _ in} receiveValue: { products in
+            .sink { completion in
+                switch completion {
+                    
+                case .finished:
+                    break
+                case .failure(let error):
+                    XCTAssertNotNil(error)
+                }
+            } receiveValue: { products in
                 
                 XCTAssertNotNil(products)
                 expectedValue = products
@@ -53,7 +61,7 @@ final class GetProductsRemoteRepositoryTests: XCTestCase {
         networkStub.getProductsFailedRequestStub()
         
         let expection = expectation(description: "NetworkError")
-        var expectedValue = [ProductDto]()
+        var expectedValue: [ProductDto]?
         
         repository.getProducts(endpoint: endpoint)
             .sink { completion in
