@@ -8,5 +8,6 @@
 import Foundation
 
 protocol FetchProductsUsecaseProtocol {
+    var products: [ProductEntity]? { get set }
     func fetchProducts()
 }

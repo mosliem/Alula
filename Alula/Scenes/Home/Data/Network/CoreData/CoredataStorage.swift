@@ -23,20 +23,20 @@ class CoredataStorage {
         return container
     }()
 
-    func save() {
+    func save() throws {
         if context.hasChanges {
             do {
                 try context.save()
                 print("Saved")
             } catch {
                 print(error.localizedDescription)
-                fatalError("can't save")
+                throw(error)
             }
         }
     }
 
     // MARK: - Creating Entities 
-    func createProduct(storedProduct: ProductEntity) {
+    func createProduct(storedProduct: ProductEntity) throws {
         let product = Product(context: context)
         product.id = Int32(storedProduct.id)
         product.category = createCategory(storedCategory: storedProduct.category)
@@ -44,7 +44,7 @@ class CoredataStorage {
         product.name = storedProduct.title
         product.info = storedProduct.description
         product.images = storedProduct.images.first?.absoluteString
-        save()
+        try save()
     }
 
     @discardableResult

@@ -8,12 +8,22 @@
 import Foundation
 
 protocol HomeLocalRepositoryProtocol {
-    func cacheProducts(products: [ProductEntity])
+    func cacheProducts(products: [ProductEntity]) throws
 }
+
 class HomeLocalRepository: HomeLocalRepositoryProtocol {
-    func cacheProducts(products: [ProductEntity]) {
+    var storage: CoredataWrapperProtocol?
+    
+    init(storage: CoredataWrapperProtocol? = CoredataWrapper() ) {
+        self.storage = storage
+    }
+    
+    func cacheProducts(products: [ProductEntity]) throws {
         for product in products {
-            CoredataStorage.shared.createProduct(storedProduct: product)
+      
+                try storage?.createProduct(storedProduct: product)
+//                try CoredataStorage.shared.createProduct(storedProduct: product)
+           
         }
     }
 }

@@ -8,9 +8,11 @@
 import Foundation
 
 class FetchProductsUsecase: FetchProductsUsecaseProtocol {
+    var products: [ProductEntity]?
+    
     let homeRepository: HomeRepositoryProtocol
     let adapter: ProductsAdapterProtocol
-
+    
     init(homeRepository: HomeRepositoryProtocol, adapter: ProductsAdapterProtocol) {
         self.homeRepository = homeRepository
         self.adapter = adapter
@@ -28,6 +30,7 @@ class FetchProductsUsecase: FetchProductsUsecaseProtocol {
                 }
             } receiveValue: { [weak self] products in
                 guard let products = self?.adapter.adapt(products: products) else {return}
+                self?.products = products
                 self?.homeRepository.cacheProducts(products: products)
             }
             .cancel()

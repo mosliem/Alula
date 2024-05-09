@@ -24,6 +24,11 @@ class HomeRepository: HomeRepositoryProtocol {
     }
 
     func cacheProducts(products: [ProductEntity]) {
-        localRepository.cacheProducts(products: products)
+        do{
+            try localRepository.cacheProducts(products: products)
+        }
+        catch {
+            print(error)
+        }
     }
 }
